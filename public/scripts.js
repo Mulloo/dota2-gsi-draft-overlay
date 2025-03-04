@@ -102,6 +102,8 @@ socket.onmessage = function (event) {
         }, 1000);
 
         // Update the draft for both teams
+        team2.currentPickIndex = data.draft.activeteam === 2 ? data.draft.activeteam_pick_index : -1;
+        team3.currentPickIndex = data.draft.activeteam === 3 ? data.draft.activeteam_pick_index : -1;
         updateDraft("bans2", team2, "ban");
         updateDraft("picks2", team2, "pick");
         updateDraft("bans3", team3, "ban");
