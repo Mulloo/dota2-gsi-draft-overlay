@@ -1,151 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Dota 2 Draft Overlay</title>
-        <link rel="icon" href="/fav/icons8-dota-2-120.png" type="image/png" />
-        <link
-            rel="apple-touch-icon"
-            sizes="30x30"
-            href="/fav/icons8-dota-2-30.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="60x60"
-            href="/fav/icons8-dota-2-60.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="90x90"
-            href="/fav/icons8-dota-2-90.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="120x120"
-            href="/fav/icons8-dota-2-120.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="240x240"
-            href="/fav/icons8-dota-2-240.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="480x480"
-            href="/fav/icons8-dota-2-480.png"
-        />
-        <link rel="stylesheet" href="styles.css" />
-    </head>
-    <body>
-        <div class="draft-container">
-            <div class="teams">
-                <div class="team" id="team2">
-                    <img
-                        id="team2-logo"
-                        class="team-logo"
-                        src="/logos/default_logo.png"
-                    />
-                    <h2 id="team2-name" class="team-name">
-                        Waiting for Data...
-                    </h2>
-                    <div class="bans" id="bans2">
-                        <div id="radiant-ban-0" class="hero-slot ban">
-                            <div class="hero-name"></div>
-                        </div>
-                        <div id="radiant-ban-1" class="hero-slot ban">
-                            <div class="hero-name"></div>
-                        </div>
-                        <div id="radiant-ban-2" class="hero-slot ban">
-                            <div class="hero-name"></div>
-                        </div>
-                        <div id="radiant-ban-3" class="hero-slot ban">
-                            <div class="hero-name"></div>
-                        </div>
-                        <div id="radiant-ban-4" class="hero-slot ban">
-                            <div class="hero-name"></div>
-                        </div>
-                    </div>
-                    <div class="picks" id="picks2">
-                        <div id="radiant-pick-0" class="hero-slot pick">
-                            <div class="hero-name"></div>
-                        </div>
-                        <div id="radiant-pick-1" class="hero-slot pick">
-                            <div class="hero-name"></div>
-                        </div>
-                        <div id="radiant-pick-2" class="hero-slot pick">
-                            <div class="hero-name"></div>
-                        </div>
-                        <div id="radiant-pick-3" class="hero-slot pick">
-                            <div class="hero-name"></div>
-                        </div>
-                        <div id="radiant-pick-4" class="hero-slot pick">
-                            <div class="hero-name"></div>
-                        </div>
-                    </div>
-                    <div class="reserve-time" id="reserve-time-radiant">
-                        Radiant Reserve Time: 0s
-                    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dota 2 Draft Overlay</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="overlay">
+        <!-- Timer -->
+        <div class="timer-container">
+            <div class="timer" id="timer">Draft Timer</div>
+        </div>
+
+        <!-- Teams Section -->
+        <div class="teams">
+            <!-- Radiant Team -->
+            <div class="team" id="team2">
+                <div class="team-info">
+                    <img id="team2-logo" class="team-logo" src="/logos/default_logo.png" alt="Radiant Logo">
+                    <h2 id="team2-name">Radiant</h2>
+                    <div class="reserve-time">Reserve Time: <span id="reserve-time2">130s</span></div>
                 </div>
-                <div class="timer" id="timer">
-                    <div id="time-display">Waiting...</div>
-                    <div id="reserve-display"></div>
+                <div class="draft-section">
+                    <div class="bans" id="bans2"></div>
+                    <div class="picks" id="picks2"></div>
                 </div>
-                <div class="team" id="team3">
-                    <img
-                        id="team3-logo"
-                        class="team-logo"
-                        src="/logos/default_logo.png"
-                    />
-                    <h2 id="team3-name" class="team-name">
-                        Waiting for Data...
-                    </h2>
-                    <div class="bans" id="bans3">
-                        <div id="dire-ban-0" class="hero-slot ban">
-                            <div class="hero-name"></div>
-                        </div>
-                        <div id="dire-ban-1" class="hero-slot ban">
-                            <div class="hero-name"></div>
-                        </div>
-                        <div id="dire-ban-2" class="hero-slot ban">
-                            <div class="hero-name"></div>
-                        </div>
-                        <div id="dire-ban-3" class="hero-slot ban">
-                            <div class="hero-name"></div>
-                        </div>
-                        <div id="dire-ban-4" class="hero-slot ban">
-                            <div class="hero-name"></div>
-                        </div>
-                    </div>
-                    <div class="picks" id="picks3">
-                        <div id="dire-pick-0" class="hero-slot pick">
-                            <div class="hero-name"></div>
-                        </div>
-                        <div id="dire-pick-1" class="hero-slot pick">
-                            <div class="hero-name"></div>
-                        </div>
-                        <div id="dire-pick-2" class="hero-slot pick">
-                            <div class="hero-name"></div>
-                        </div>
-                        <div id="dire-pick-3" class="hero-slot pick">
-                            <div class="hero-name"></div>
-                        </div>
-                        <div id="dire-pick-4" class="hero-slot pick">
-                            <div class="hero-name"></div>
-                        </div>
-                    </div>
-                    <div class="reserve-time" id="reserve-time-dire">
-                        Dire Reserve Time: 0s
-                    </div>
+            </div>
+
+            <!-- Dire Team -->
+            <div class="team" id="team3">
+                <div class="team-info">
+                    <img id="team3-logo" class="team-logo" src="/logos/default_logo.png" alt="Dire Logo">
+                    <h2 id="team3-name">Dire</h2>
+                    <div class="reserve-time">Reserve Time: <span id="reserve-time3">130s</span></div>
+                </div>
+                <div class="draft-section">
+                    <div class="bans" id="bans3"></div>
+                    <div class="picks" id="picks3"></div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <script src="scripts.js"></script>
-    </body>
+    <script src="scripts.js"></script>
+</body>
 </html>

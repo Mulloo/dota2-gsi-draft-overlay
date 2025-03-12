@@ -1,93 +1,128 @@
-@font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 200;
-    src: url('/Montserrat-ExtraLight.ttf') format('truetype');
-}
-
+/* Base styling */
 body {
-    background-color: #24272d; /* Set background color to dark gray */
-    color: white;
-    font-family: 'Montserrat', Arial, sans-serif; /* Use Montserrat font */
-    text-align: center;
-    overflow: hidden;
     margin: 0;
     padding: 0;
-    width: 1920px;
-    height: 1080px;
+    background-color: #101010;
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
 }
 
-.draft-container {
-    width: 100%;
-    height: 33vh; /* Take up one-third of the screen vertically */
+.overlay {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    position: absolute;
-    bottom: 0;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
 }
 
+/* Timer Styling */
+.timer-container {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.timer {
+    font-size: 48px;
+    color: yellow;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Team Section */
 .teams {
     display: flex;
     justify-content: space-between;
     width: 80%;
+    gap: 20px;
 }
 
 .team {
     width: 45%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #444;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.team.active-picking {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.8);
+}
+
+/* Team Info */
+.team-info {
     text-align: center;
 }
 
 .team-logo {
-    height: 50px;
+    width: 80px;
     margin-bottom: 10px;
 }
 
-.picks,
-.bans {
+.team h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Reserve Time */
+.reserve-time {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* Draft Section (Picks and Bans) */
+.draft-section {
+    margin-top: 20px;
+}
+
+.bans, .picks {
     display: flex;
     justify-content: center;
     gap: 10px;
     margin-top: 10px;
 }
 
-.hero-slot {
-    background-color: rgba(0, 0, 0, 0.5); /* Darker background for better contrast */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    overflow: hidden;
-    position: relative;
-    border: 2px solid rgba(255, 255, 255, 0.3); /* Solid border for better visibility */
+/* Adjusted hero slot sizes for WebM (Picks) to look like cards */
+.picks .hero-slot {
+    width: 180px;  /* Increased width for WebM "cards" */
+    height: 250px;  /* Increased height for WebM "cards" */
+    border-radius: 12px;  /* Rounded corners */
+    border: 3px solid #ccc;  /* Light border for the card look */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);  /* Shadow for depth */
+    overflow: hidden;  /* Prevents anything from overflowing the rounded corners */
 }
 
-.hero-slot.pick {
-    width: 160px; /* Set the width for picks */
-    height: 90px; /* Maintain 16:9 aspect ratio */
-}
-
-.hero-slot.ban {
-    width: 120px; /* Set the width for bans */
-    height: 68px; /* Maintain 16:9 aspect ratio */
-}
-
-.hero-slot img,
-.hero-slot video {
+/* Ensure WebM videos scale correctly inside the card */
+.picks .hero-slot video {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;  /* Makes sure the video fits inside the card */
+    border-radius: 12px;  /* Rounded corners for the video */
 }
 
-.hero-slot.show {
-    opacity: 1;
-    transform: translateY(0);
-    border: none; /* Remove border when hero is picked */
+/* Keep bans with the same size */
+.bans .hero-slot {
+    width: 100px;  /* Default size for ban image slots */
+    height: 55px;  /* Default size for ban image slots */
 }
 
+/* Ensure ban images scale correctly */
+.bans .hero-slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Ensures the images fill the slot */
+    border-radius: 6px;
+}
+
+/* Bans with Red Effect */
 .ban {
-    filter: grayscale(100%); /* Apply full grayscale filter to bans */
+    filter: brightness(50%) sepia(100%) hue-rotate(-50deg) saturate(500%);
+    position: relative;
 }
 
 .ban::after {
@@ -97,107 +132,29 @@ body {
     left: 0;
     width: 100%;
     height: 4px;
-    background-color: rgba(255, 0, 0, 0.8); /* Red line for bans */
-    transform: translateY(-50%) rotate(-45deg);
-    box-shadow: 0 0 5px rgba(131, 43, 43, 0.5) !important;
+    background-color: red;
+    transform: translateY(-50%) rotate(-15deg);
+    box-shadow: 0 0 5px red;
 }
 
-.timer {
-    font-size: 24px;
-    margin-top: 20px;
-    background-color: rgba(0, 0, 0, 0.7); /* Darker background for readability */
-    padding: 10px 20px;
-    border-radius: 10px;
-    border: 2px solid white; /* Add border */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Active Picking Indicator */
+.active-picking {
+    box-shadow: 0px 0px 15px rgba(255, 255, 0, 0.8);
+    transform: scale(1.05);
 }
 
-#time-display {
-    color: white; /* Set time text color to white */
-}
-
-#reserve-display {
-    color: gold; /* Set reserve time text color to gold */
-}
-
-.reserve-time {
-    font-size: 18px;
+/* Styling for active team text */
+#pick-ban-status {
+    font-size: 20px;
+    font-weight: bold;
     margin-top: 10px;
-    color: gold; /* Set reserve time color to gold */
-    display: none; /* Hide by default */
+    transition: color 0.3s ease-in-out;
 }
 
-.reserve-time.active {
-    display: block; /* Show when active */
+.picking {
+    color: green;
 }
 
-.timer .reserve-time.active {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.team .reserve-time {
-    display: inline-block;
-    margin-left: 10px;
-    font-size: 18px;
-    color: gold;
-    background-color: transparent;
-    border: none;
-    padding: 0;
-}
-
-.animate {
-    animation: flash 1s ease-in-out infinite;
-}
-
-@keyframes flash {
-    0% {
-        background-color: yellow;
-    }
-    100% {
-        background-color: transparent;
-    }
-}
-
-html, body, #hud-container {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
-
-#hud-container {
-    position: absolute;
-    z-index: 1;
-}
-
-@supports not (aspect-ratio: 16 / 9) {
-    body, #hud-container {
-        /* Add any specific styles for browsers that do not support aspect-ratio */
-    }
-}
-
-#banned {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 40px;
-    font-weight: 100;
-    background-color: #24272d;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 0 20%;
-    width: 60%;
-    flex-direction: column;
-    font-family: "Montserrat";
-    color: white;
-}
-
-#banned img {
-    margin-bottom: 93px;
+.banning {
+    color: red;
 }
