@@ -101,8 +101,14 @@ export default function DraftOverlay() {
       <div className="absolute text-center" style={{ bottom: '150px', left: '50%', transform: 'translateX(-50%)' }}>
         <h2 className="text-2xl font-bold text-yellow-400">Draft Timer: {draft.activeteam_time_remaining || 0}s</h2>
         <p className="text-md font-semibold text-gray-300">
-          🕒 Radiant Reserve: <span className="text-green-400">{formatTime(draft.radiant_bonus_time || 0)}s</span> | 
-          🕒 Dire Reserve: <span className="text-red-400">{formatTime(draft.dire_bonus_time || 0)}s</span>
+          Radiant Reserve :
+          <span className={`${ activeTeam === 'Radiant' && draft.activeteam_time_remaining === 0 && draft.radiant_bonus_time > 0 ? 'text-green-400 glow-effect' : 'text-green-400'}`}>
+            {formatTime(draft.radiant_bonus_time || 0)}s
+          </span> | 
+          Dire Reserve :
+          <span className={`${ activeTeam === 'Dire' && draft.activeteam_time_remaining === 0 && draft.dire_bonus_time > 0 ? 'text-red-400 glow-effect' : 'text-red-400'}`}>
+            {formatTime(draft.dire_bonus_time || 0)}s
+          </span>
         </p>
         <h3 className="text-xl font-bold mt-2 text-white">{activeTeam} is selecting: {activePickOrBan}</h3>
       </div>
