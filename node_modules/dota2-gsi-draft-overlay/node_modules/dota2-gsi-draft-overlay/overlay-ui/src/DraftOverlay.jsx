@@ -12,6 +12,7 @@ export default function DraftOverlay() {
         .then(res => {
           setGameState(res.data);
           setIsInGame(res.data.map && res.data.map.game_state === 'DOTA_GAMERULES_STATE_GAME_IN_PROGRESS');
+          console.log('Game State:', res.data); // Debugging log
         })
         .catch(err => console.error(err));
     }, 500);
@@ -88,7 +89,8 @@ export default function DraftOverlay() {
     );
   };
 
-  const players = gameState.player || {};
+  const players = { ...gameState.player?.team2, ...gameState.player?.team3 };
+  console.log('Players:', players); // Debugging log
 
   const renderPlayerInfo = (player, idx) => {
     return (
