@@ -1,0 +1,160 @@
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import './DraftOverlay.css';
+
+export default function DraftOverlay() {
+  const [gameState, setGameState] = useState({});
+  const [isInGame, setIsInGame] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      axios.get('http://localhost:4000/gamestate')
+        .then(res => {
+          setGameState(res.data);
+          setIsInGame(res.data.map && res.data.map.game_state === 'DOTA_GAMERULES_STATE_GAME_IN_PROGRESS');
+          console.log('Game State:', res.data); // Debugging log
+        })
+        .catch(err => console.error(err));
+    }, 500);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const draft = gameState.draft || {};
+  const radiant = draft.team2 || {};
+  const dire = draft.team3 || {};
+  const activeTeam = draft.activeteam === 2 ? 'Radiant' : 'Dire';
+  const activePickOrBan = draft.pick ? "Pick" : "Ban";
+
+  const getTeamPicks = (team) => {
+    return Object.entries(team)
+      .filter(([key, value]) => key.match(/^pick\d+_class$/) && value)
+      .map(([_, value]) => value.replace("npc_dota_hero_", ""));
+  };
+
+  const getTeamBans = (team) => {
+    return Object.entries(team)
+      .filter(([key, value]) => key.match(/^ban\d+_class$/) && value)
+      .map(([_, value]) => value.replace("npc_dota_hero_", ""));
+  };
+
+  const formatTime = (seconds) => {
+    const minutes = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${minutes}:${secs < 10 ? `0${secs}` : secs}`;
+  };
+
+  const renderPickedHeroes = (heroes, size = '96px', totalSlots = 5) => {
+    return (
+      <div className="flex flex-wrap gap-2">
+        {heroes.map((hero, idx) => (
+          <video
+            key={idx}
+            autoPlay
+            loop
+            muted
+            playsInline
+            src={`https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_${hero}.webm`}
+            className="rounded-md object-contain"
+            style={{ width: size, height: size, margin: '4px', display: 'block' }}
+          />
+        ))}
+        {Array.from({ length: totalSlots - heroes.length }).map((_, idx) => (
+          <div
+            key={`empty-${idx}`}
+            style={{ width: size, height: size, backgroundColor: '#1f2937', borderRadius: '8px', margin: '4px' }}
+          />
+        ))}
+      </div>
+    );
+  };
+
+  const renderBannedHeroes = (heroes, size = '80px', totalSlots = 7) => {
+    return (
+      <div className="flex flex-wrap gap-2">
+        {heroes.map((hero, idx) => (
+          <div key={idx} className="relative" style={{ width: size, height: size, margin: '4px' }}>
+            <img
+              src={`https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_${hero}.png`}
+              alt={hero}
+              className="rounded-md object-cover opacity-50"
+              style={{ width: '100%', height: '100%' }}
+            />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className="text-red-600 text-3xl font-bold">X</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    );
+  };
+
+  const players = { ...gameState.player?.team2, ...gameState.player?.team3 };
+  console.log('Players:', players); // Debugging log
+
+  const renderPlayerInfo = (player, idx) => {
+    return (
+      <div key={idx} className="player-info text-left p-2 m-2 bg-gray-800 rounded-md">
+        <p className="text-sm font-bold">Name: {player.name}</p>
+        <p className="text-sm">Gold: {player.gold}</p>
+        <p className="text-sm">CS: {player.last_hits}/{player.denies}</p>
+        <p className="text-sm">Level: {player.level}</p>
+      </div>
+    );
+  };
+
+  return (
+    <div className="relative bg-transparent text-white" style={{ width: '1920px', height: '1080px' }}>
+      {isInGame ? (
+        <div className="absolute" style={{ top: '50px', left: '50px' }}>
+          <h1 className="text-xl font-bold text-green-400">Player Info</h1>
+          <div className="grid grid-cols-2 gap-4">
+            {Object.values(players).map(renderPlayerInfo)}
+          </div>
+        </div>
+      ) : (
+        <div className="draft-overlay">
+          {/* Radiant Picks */}
+          <div className="absolute" style={{ bottom: '270px', left: '100px' }}>
+            <h1 className="text-xl font-bold text-green-400">Radiant Picks</h1>
+            {renderPickedHeroes(getTeamPicks(radiant))}
+          </div>
+
+          {/* Dire Picks */}
+          <div className="absolute" style={{ bottom: '270px', right: '100px' }}>
+            <h1 className="text-xl font-bold text-red-400">Dire Picks</h1>
+            {renderPickedHeroes(getTeamPicks(dire))}
+          </div>
+
+          {/* Draft Timer and Active Selection */}
+          <div className="absolute text-center" style={{ bottom: '150px', left: '50%', transform: 'translateX(-50%)' }}>
+            <h2 className="text-2xl font-bold text-yellow-400">Draft Timer: {draft.activeteam_time_remaining || 0}s</h2>
+            <p className="text-md font-semibold text-gray-300">
+              Radiant Reserve :
+              <span className={`${ activeTeam === 'Radiant' && draft.activeteam_time_remaining === 0 && draft.radiant_bonus_time > 0 ? 'text-green-400 glow-effect' : 'text-green-400'}`}>
+                {formatTime(draft.radiant_bonus_time || 0)}s
+              </span> | 
+              Dire Reserve :
+              <span className={`${ activeTeam === 'Dire' && draft.activeteam_time_remaining === 0 && draft.dire_bonus_time > 0 ? 'text-red-400 glow-effect' : 'text-red-400'}`}>
+                {formatTime(draft.dire_bonus_time || 0)}s
+              </span>
+            </p>
+            <h3 className="text-xl font-bold mt-2 text-white">{activeTeam} is selecting: {activePickOrBan}</h3>
+          </div>
+
+          {/* Radiant Bans */}
+          <div className="absolute" style={{ bottom: '100px', left: '100px' }}>
+            <h1 className="text-lg font-bold text-green-400">Radiant Bans</h1>
+            {renderBannedHeroes(getTeamBans(radiant))}
+          </div>
+
+          {/* Dire Bans */}
+          <div className="absolute" style={{ bottom: '100px', right: '100px' }}>
+            <h1 className="text-lg font-bold text-red-400">Dire Bans</h1>
+            {renderBannedHeroes(getTeamBans(dire))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
