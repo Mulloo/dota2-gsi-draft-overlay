@@ -5,9 +5,20 @@
     transition: text-shadow 0.3s ease-in-out;
 }
 
-.player-info {
-    margin: 10px;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
+.hero-gold {
+    color: #ffd700; /* Gold color */
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.hero-level {
+    color: #00ff00; /* Green color */
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.gold-icon {
+  width: 16px; /* Adjust the width as needed */
+  height: 16px; /* Adjust the height as needed */
+  vertical-align: middle; /* Align the icon with the text */
 }

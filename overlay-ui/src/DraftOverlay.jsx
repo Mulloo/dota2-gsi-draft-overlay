@@ -2,6 +2,42 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './DraftOverlay.css';
 
+const heroPortraitPositions = {
+  team2: [ // Radiant (left to right)
+    { top: 50, left: 580 },
+    { top: 50, left: 640 },
+    { top: 50, left: 700 },
+    { top: 50, left: 760 },
+    { top: 50, left: 820 },
+  ],
+  team3: [ // Dire (right to left)
+    { top: 50, right: 770 },
+    { top: 50, right: 710 },
+    { top: 50, right: 650 },
+    { top: 50, right: 590 },
+    { top: 50, right: 530 },
+  ],
+};
+
+const experienceLevels = [
+  0, 230, 600, 1080, 1660, 2260, 2980, 3730, 4510, 5320,
+  6160, 7030, 7930, 8860, 9820, 10810, 11830, 12880, 13960,
+  15070, 16210, 17380, 18580, 19810, 21070
+];
+
+const calculateHeroLevel = (xpm, gameTimeMinutes) => {
+  const xp = xpm * gameTimeMinutes;
+  let level = 1;
+  for (let i = 0; i < experienceLevels.length; i++) {
+    if (xp >= experienceLevels[i]) {
+      level = i + 1;
+    } else {
+      break;
+    }
+  }
+  return level;
+};
+
 export default function DraftOverlay() {
   const [gameState, setGameState] = useState({});
   const [isInGame, setIsInGame] = useState(false);
@@ -55,7 +91,7 @@ export default function DraftOverlay() {
             muted
             playsInline
             src={`https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_${hero}.webm`}
-            className="rounded-md object-contain"
+            className="object-contain rounded-md"
             style={{ width: size, height: size, margin: '4px', display: 'block' }}
           />
         ))}
@@ -77,11 +113,11 @@ export default function DraftOverlay() {
             <img
               src={`https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_${hero}.png`}
               alt={hero}
-              className="rounded-md object-cover opacity-50"
+              className="object-cover rounded-md opacity-50"
               style={{ width: '100%', height: '100%' }}
             />
             <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-red-600 text-3xl font-bold">X</span>
+              <span className="text-3xl font-bold text-red-600">X</span>
             </div>
           </div>
         ))}
@@ -89,29 +125,44 @@ export default function DraftOverlay() {
     );
   };
 
-  const players = { ...gameState.player?.team2, ...gameState.player?.team3 };
-  console.log('Players:', players); // Debugging log
-
-  const renderPlayerInfo = (player, idx) => {
-    return (
-      <div key={idx} className="player-info text-left p-2 m-2 bg-gray-800 rounded-md">
-        <p className="text-sm font-bold">Name: {player.name}</p>
-        <p className="text-sm">Gold: {player.gold}</p>
-        <p className="text-sm">CS: {player.last_hits}/{player.denies}</p>
-        <p className="text-sm">Level: {player.level}</p>
-      </div>
-    );
+  const players = {
+    team2: gameState.player?.team2 || {},
+    team3: gameState.player?.team3 || {}
   };
 
+  const gameTimeMinutes = gameState.map ? Math.floor(gameState.map.clock_time / 60) : 0;
+
   return (
-    <div className="relative bg-transparent text-white" style={{ width: '1920px', height: '1080px' }}>
+    <div className="relative text-white bg-transparent" style={{ width: '1920px', height: '1080px' }}>
       {isInGame ? (
-        <div className="absolute" style={{ top: '50px', left: '50px' }}>
-          <h1 className="text-xl font-bold text-green-400">Player Info</h1>
-          <div className="grid grid-cols-2 gap-4">
-            {Object.values(players).map(renderPlayerInfo)}
-          </div>
-        </div>
+        <>
+          {/* Floating Gold + Level Labels */}
+          {['team2', 'team3'].map((teamKey) => {
+            const teamPlayers = players[teamKey];
+            return Object.values(teamPlayers).map((player, idx) => {
+              const pos = heroPortraitPositions[teamKey][idx];
+              if (!pos) return null;
+              const level = calculateHeroLevel(player.xpm, gameTimeMinutes);
+              return (
+                <div
+                  key={`${teamKey}-${idx}`}
+                  className="absolute text-xs text-center text-white"
+                  style={{
+                    ...pos,
+                    transform: 'translateX(-50%)',
+                    padding: '2px 6px',
+                    borderRadius: '4px',
+                    fontWeight: 'bold',
+                    zIndex: 20,
+                  }}
+                >
+                  <div class="hero-gold"> <img class="gold-icon" src="gold.webp" alt="gold icon" />:{player.gold}</div>
+                  <div class="hero-level">Lvl: {level}</div>
+                </div>
+              );
+            });
+          })}
+        </>
       ) : (
         <div className="draft-overlay">
           {/* Radiant Picks */}
@@ -129,17 +180,17 @@ export default function DraftOverlay() {
           {/* Draft Timer and Active Selection */}
           <div className="absolute text-center" style={{ bottom: '150px', left: '50%', transform: 'translateX(-50%)' }}>
             <h2 className="text-2xl font-bold text-yellow-400">Draft Timer: {draft.activeteam_time_remaining || 0}s</h2>
-            <p className="text-md font-semibold text-gray-300">
+            <p className="font-semibold text-gray-300 text-md">
               Radiant Reserve :
-              <span className={`${ activeTeam === 'Radiant' && draft.activeteam_time_remaining === 0 && draft.radiant_bonus_time > 0 ? 'text-green-400 glow-effect' : 'text-green-400'}`}>
+              <span className={`${activeTeam === 'Radiant' && draft.activeteam_time_remaining === 0 && draft.radiant_bonus_time > 0 ? 'text-green-400 glow-effect' : 'text-green-400'}`}>
                 {formatTime(draft.radiant_bonus_time || 0)}s
-              </span> | 
+              </span> |
               Dire Reserve :
-              <span className={`${ activeTeam === 'Dire' && draft.activeteam_time_remaining === 0 && draft.dire_bonus_time > 0 ? 'text-red-400 glow-effect' : 'text-red-400'}`}>
+              <span className={`${activeTeam === 'Dire' && draft.activeteam_time_remaining === 0 && draft.dire_bonus_time > 0 ? 'text-red-400 glow-effect' : 'text-red-400'}`}>
                 {formatTime(draft.dire_bonus_time || 0)}s
               </span>
             </p>
-            <h3 className="text-xl font-bold mt-2 text-white">{activeTeam} is selecting: {activePickOrBan}</h3>
+            <h3 className="mt-2 text-xl font-bold text-white">{activeTeam} is selecting: {activePickOrBan}</h3>
           </div>
 
           {/* Radiant Bans */}
