@@ -23,7 +23,7 @@ const teams = {
   },
   imprint: {
     name: 'Imprint Esports',
-    logo: 'imprint_logo.png',
+    logo: 'teamlogos/imprint_esports.png',
     players: [
       { id: 1, name: 'eN1gma' },
       { id: 2, name: 'Asgrav' },
@@ -34,7 +34,7 @@ const teams = {
   },
   miketeam: {
     name: 'Mike Team',
-    logo: 'mike_team.png',
+    logo: 'teamlogos/mike_team.png',
     players: [
       { id: 1, name: 'Pro_Mike' },
       { id: 2, name: 'Jesse James' },
@@ -45,7 +45,7 @@ const teams = {
   },
   croakercamp: {
     name: 'Croaker Camp',
-    logo: 'croaker_camp.png',
+    logo: 'teamlogos/croaker_camp.png',
     players: [
       { id: 1, name: 'Onix' },
       { id: 2, name: 'Poddy' },
@@ -56,7 +56,7 @@ const teams = {
   },
   wongs: {
     name: 'Wong\'s',
-    logo: 'wongs.png',
+    logo: 'teamlogos/wongs.png',
     players: [
       { id: 1, name: 'Maniac' },
       { id: 2, name: 'K4mky' },
@@ -67,7 +67,7 @@ const teams = {
   },
   cavan: {
     name: 'Cavan',
-    logo: 'cavan.png',
+    logo: 'teamlogos/cavan.png',
     players: [
       { id: 1, name: 'Coy' },
       { id: 2, name: 'Key' },
@@ -110,12 +110,12 @@ const teams = {
     ],
   },
   niallteam: {
-    name: 'Niall Team',
-    logo: 'niall_team.png',
+    name: 'Titanic Esports',
+    logo: 'teamlogos/titanic_esports.png',
     players: [
       { id: 1, name: 'Niall' },
       { id: 2, name: 'OVOXO' },
-      { id: 3, name: 'Handyman' },
+      { id: 3, name: 'Young Handyman' },
       { id: 4, name: 'Pliskin' },
       { id: 5, name: 'Catalyst' },
     ],
