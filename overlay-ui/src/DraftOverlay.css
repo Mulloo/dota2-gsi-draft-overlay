@@ -22,3 +22,46 @@
   height: 16px; /* Adjust the height as needed */
   vertical-align: middle; /* Align the icon with the text */
 }
+
+@keyframes arrow-fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes arrow-fade-in-radiant {
+  0% {
+    opacity: 0;
+    transform: rotate(180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes arrow-fade-in-dire {
+  0% {
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(180deg);
+  }
+}
+
+.arrow-fade-out {
+  animation: arrow-fade-out 0.5s ease-in-out forwards;
+}
+
+.arrow-fade-in-radiant {
+  animation: arrow-fade-in-radiant 0.5s ease-in-out forwards;
+}
+
+.arrow-fade-in-dire {
+  animation: arrow-fade-in-dire 0.5s ease-in-out forwards;
+}
