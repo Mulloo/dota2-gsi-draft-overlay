@@ -2,45 +2,10 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './DraftOverlay.css';
 import teams from './teamInfo'; // Import team information
-
-// Positions for hero portraits for both teams
-const heroPortraitPositions = {
-  team2: [ // Radiant (left to right)
-    { top: 50, left: 580 },
-    { top: 50, left: 640 },
-    { top: 50, left: 700 },
-    { top: 50, left: 760 },
-    { top: 50, left: 820 },
-  ],
-  team3: [ // Dire (right to left)
-    { top: 50, right: 770 },
-    { top: 50, right: 710 },
-    { top: 50, right: 650 },
-    { top: 50, right: 590 },
-    { top: 50, right: 530 },
-  ],
-};
-
-// Experience levels required for each hero level
-const experienceLevels = [
-  0, 230, 600, 1080, 1660, 2260, 2980, 3730, 4510, 5320,
-  6160, 7030, 7930, 8860, 9820, 10810, 11830, 12880, 13960,
-  15070, 16210, 17380, 18580, 19810, 21070
-];
-
-// Calculate hero level based on XPM and game time
-const calculateHeroLevel = (xpm, gameTimeMinutes) => {
-  const xp = xpm * gameTimeMinutes;
-  let level = 1;
-  for (let i = 0; i < experienceLevels.length; i++) {
-    if (xp >= experienceLevels[i]) {
-      level = i + 1;
-    } else {
-      break;
-    }
-  }
-  return level;
-};
+import heroNameMapping from './heroNameMapping'; // Import hero name mapping
+import heroPortraitPositions from './heroPortraitPositions'; // Import hero portrait positions
+import { calculateHeroLevel, formatTime } from './utilityFunctions'; // Import utility functions
+import { fetchLeagueHeroStatistics } from './api'; // Import the API function
 
 const arrowStyle = {
   position: 'absolute',
@@ -49,10 +14,28 @@ const arrowStyle = {
   zIndex: 30,
 };
 
-export default function DraftOverlay() {
+// Format hero name
+const formatHeroName = (hero) => {
+  const formattedName = hero.replace(/npc_dota_hero_/, '').replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
+  return heroNameMapping[formattedName.toLowerCase()] || formattedName;
+};
+
+// Determine the next slot to be filled for picks or bans
+const getNextSlotIndex = (team, type) => {
+  const prefix = type === 'pick' ? 'pick' : 'ban';
+  for (let i = 0; i < 7; i++) {
+    if (!team[`${prefix}${i}_class`]) {
+      return i;
+    }
+  }
+  return -1;
+};
+
+const DraftOverlay = ({ leagueId }) => {
   const [gameState, setGameState] = useState({});
   const [isInGame, setIsInGame] = useState(false);
   const [hidePlayerInfo, setHidePlayerInfo] = useState(false);
+  const [heroStatistics, setHeroStatistics] = useState([]);
 
   useEffect(() => {
     // Fetch game state every 500ms
@@ -61,7 +44,6 @@ export default function DraftOverlay() {
         .then(res => {
           setGameState(res.data);
           setIsInGame(res.data.map && res.data.map.game_state === 'DOTA_GAMERULES_STATE_GAME_IN_PROGRESS');
-          console.log('Game State:', res.data); // Debugging log
 
           // Detect kills and hide player info for 3 seconds if any kills are detected
           const players = res.data.player || {};
@@ -83,6 +65,33 @@ export default function DraftOverlay() {
   const activeTeam = draft.activeteam === 2 ? 'Radiant' : 'Dire';
   const activePickOrBan = draft.pick ? "Pick" : "Ban";
 
+  useEffect(() => {
+    const getHeroStatistics = async () => {
+      console.log('Calling fetchLeagueHeroStatistics'); // Log before calling the function
+      const data = await fetchLeagueHeroStatistics(leagueId); // Replace with the actual league ID
+      console.log('API Response:', data); // Log the API response
+      setHeroStatistics(data);
+    };
+
+    if (gameState.map && gameState.map.game_state === 'DOTA_GAMERULES_STATE_HERO_SELECTION') {
+      console.log('Current Game State:', gameState); // Log the current game state
+      getHeroStatistics();
+    }
+  }, [gameState, leagueId]);
+
+  useEffect(() => {
+    heroStatistics.forEach(hero => {
+      console.log('Hero Name:', hero.name);
+    });
+  }, [heroStatistics]);
+
+  const renderHeroWinRate = (heroName) => {
+    console.log('Hero Name:', heroName); // Log the hero name
+    const formattedHeroName = heroNameMapping[heroName.toLowerCase()] || heroName;
+    const hero = heroStatistics.find(h => h.name.toLowerCase() === formattedHeroName.toLowerCase());
+    return hero ? `${hero.winrate}%` : 'N/A';
+  };
+
   // Get the list of picked heroes for a team
   const getTeamPicks = (team) => {
     return Object.entries(team)
@@ -97,63 +106,91 @@ export default function DraftOverlay() {
       .map(([_, value]) => value.replace("npc_dota_hero_", ""));
   };
 
-  // Format time in minutes:seconds
-  const formatTime = (seconds) => {
-    const minutes = Math.floor(seconds / 60);
-    const secs = seconds % 60;
-    return `${minutes}:${secs < 10 ? `0${secs}` : secs}`;
-  };
-
   // Render picked heroes
-  const renderPickedHeroes = (heroes, size = '96px', totalSlots = 5) => {
-    return (
-      <div className="flex flex-wrap gap-2">
-        {heroes.map((hero, idx) => (
-          <video
-            key={idx}
-            autoPlay
-            loop
-            muted
-            playsInline
-            src={`https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_${hero}.webm`}
-            className="object-contain rounded-md"
-            style={{ width: size, height: size, margin: '4px', display: 'block' }}
-          />
-        ))}
-        {Array.from({ length: totalSlots - heroes.length }).map((_, idx) => (
-          <div
-            key={`empty-${idx}`}
-            className={idx === 0 ? 'glow-effect' : ''}
-            style={{ width: size, height: size, backgroundColor: '#1f2937', borderRadius: '8px', margin: '4px' }}
-          />
-        ))}
-      </div>
-    );
-  };
-
-  // Render banned heroes
-  const renderBannedHeroes = (heroes, size = '80px', totalSlots = 7) => {
+  const renderPickedHeroes = (heroes, size = '100px', totalSlots = 5, nextSlotIndex) => {
     return (
       <div className="flex flex-wrap gap-2">
         {heroes.map((hero, idx) => (
           <div key={idx} className="relative" style={{ width: size, height: size, margin: '4px' }}>
-            <img
-              src={`https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_${hero}.png`}
-              alt={hero}
-              className="object-cover rounded-md opacity-50"
-              style={{ width: '100%', height: '100%' }}
-            />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-3xl font-bold text-red-600">X</span>
+            {hero ? (
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                src={`https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_${hero}.webm`}
+                className="object-contain rounded-md"
+                style={{ width: '100%', height: '100%' }}
+              />
+            ) : null}
+            <div className="absolute bottom-0 left-0 right-0 text-xs text-center text-white bg-black bg-opacity-50">
+              {formatHeroName(hero)}
             </div>
           </div>
         ))}
         {Array.from({ length: totalSlots - heroes.length }).map((_, idx) => (
           <div
             key={`empty-${idx}`}
-            className={idx === 0 ? 'glow-effect' : ''}
+            className={idx === nextSlotIndex ? 'next-slot' : ''}
             style={{ width: size, height: size, backgroundColor: '#1f2937', borderRadius: '8px', margin: '4px' }}
-          />
+          >
+            {idx === nextSlotIndex && (
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                src="/loading.webm"
+                className="object-contain rounded-md"
+                style={{ width: '100%', height: '100%' }}
+              />
+            )}
+          </div>
+        ))}
+      </div>
+    );
+  };
+
+  // Render banned heroes
+  const renderBannedHeroes = (heroes, size = '80px', totalSlots = 7, nextSlotIndex) => {
+    return (
+      <div className="flex flex-wrap gap-2 red-tint">
+        {heroes.map((hero, idx) => (
+          <div key={idx} className="relative" style={{ width: size, height: size, margin: '4px' }}>
+            {hero ? (
+              <img
+                src={`https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_${hero}.png`}
+                alt={hero}
+                className="object-cover rounded-md opacity-50"
+                style={{ width: '100%', height: '100%' }}
+              />
+            ) : null}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className="font-bold text-red-600 text-7xl">X</span>
+            </div>
+            <div className="absolute bottom-0 text-xs text-center text-white bg-black bg-opacity-50 left: 0 right:">
+              {formatHeroName(hero)}
+            </div>
+          </div>
+        ))}
+        {Array.from({ length: totalSlots - heroes.length }).map((_, idx) => (
+          <div
+            key={`empty-${idx}`}
+            className={idx === nextSlotIndex ? 'next-slot' : ''}
+            style={{ width: size, height: size, backgroundColor: '#1f2937', borderRadius: '8px', margin: '4px' }}
+          >
+            {idx === nextSlotIndex && (
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                src="/loading.webm"
+                className="object-contain rounded-md"
+                style={{ width: '100%', height: '100%' }}
+              />
+            )}
+          </div>
         ))}
       </div>
     );
@@ -166,17 +203,28 @@ export default function DraftOverlay() {
 
   const gameTimeMinutes = gameState.map ? Math.floor(gameState.map.clock_time / 60) : 0;
 
-  const getTeamByPlayerId = (playerId) => {
+  const getTeamByPlayerNames = (playerNames) => {
     for (const teamId in teams) {
-      if (teams[teamId].players.some(player => player.id === playerId)) {
+      const teamPlayers = teams[teamId].players.map(player => player.name);
+      const matchingPlayers = playerNames.filter(name => teamPlayers.includes(name));
+      if (matchingPlayers.length > 0) {
         return teams[teamId];
       }
     }
     return { name: 'Unknown', logo: '', players: [] };
   };
 
-  const radiantTeamInfo = teams.team2 || { name: 'Radiant', logo: '/radiant.webp' };
-  const direTeamInfo = teams.team3 || { name: 'Dire', logo: '/dire.webp' };
+  // Gather all player names for each team
+  const radiantPlayerNames = Object.values(players.team2).map(player => player.name);
+  const direPlayerNames = Object.values(players.team3).map(player => player.name);
+
+  const radiantTeamInfo = getTeamByPlayerNames(radiantPlayerNames) || { name: 'Radiant', logo: '/radiant.webp' };
+  const direTeamInfo = getTeamByPlayerNames(direPlayerNames) || { name: 'Dire', logo: '/dire.webp' };
+
+  const nextRadiantPickSlot = getNextSlotIndex(radiant, 'pick');
+  const nextDirePickSlot = getNextSlotIndex(dire, 'pick');
+  const nextRadiantBanSlot = getNextSlotIndex(radiant, 'ban');
+  const nextDireBanSlot = getNextSlotIndex(dire, 'ban');
 
   return (
     <div className="relative text-white bg-transparent" style={{ width: '1920px', height: '1080px' }}>
@@ -212,10 +260,17 @@ export default function DraftOverlay() {
       ) : (
         <div className="draft-overlay">
           {/* Radiant Picks */}
+          <img src={radiantTeamInfo.logo} alt="Radiant Logo" className={`team-logo ${activeTeam === 'Radiant' ? 'active-team green' : ''}`}
+            style={{
+              position: 'absolute',
+              top: '700px',
+              left: '700px',
+              width: '100px',
+              height: '100px',
+            }} />
           <div className="absolute" style={{ bottom: '270px', left: '100px' }}>
             <h1 className="text-xl font-bold text-green-400">{radiantTeamInfo.name} Picks</h1>
-            <img src={radiantTeamInfo.logo} alt="Radiant Logo" className="team-logo" />
-            {renderPickedHeroes(getTeamPicks(radiant))}
+            {renderPickedHeroes(getTeamPicks(radiant), '100px', 5, nextRadiantPickSlot)}
             {activeTeam === 'Radiant' && (
               <img
                 src="/arrow.png"
@@ -224,13 +279,25 @@ export default function DraftOverlay() {
                 style={{ ...arrowStyle, left: '835px', bottom: '20px' }}
               />
             )}
+            {getTeamPicks(radiant).map(hero => (
+              <div key={hero}>
+                <p>{hero}: {renderHeroWinRate(hero)}</p>
+              </div>
+            ))}
           </div>
 
           {/* Dire Picks */}
           <div className="absolute" style={{ bottom: '270px', right: '100px' }}>
+            <img src={direTeamInfo.logo} alt="Dire Logo" className={`team-logo ${activeTeam === 'Dire' ? 'active-team red' : ''}`}
+              style={{
+                position: 'absolute',
+                top: '32px',
+                right: '650px',
+                width: '100px',
+                height: '100px',
+              }} />
             <h1 className="text-xl font-bold text-red-400">{direTeamInfo.name} Picks</h1>
-            <img src={direTeamInfo.logo} alt="Dire Logo" className="team-logo" />
-            {renderPickedHeroes(getTeamPicks(dire))}
+            {renderPickedHeroes(getTeamPicks(dire), '100px', 5, nextDirePickSlot)}
             {activeTeam === 'Dire' && (
               <img
                 src="/arrow.png"
@@ -239,11 +306,24 @@ export default function DraftOverlay() {
                 style={{ ...arrowStyle, right: '835px', bottom: '20px' }}
               />
             )}
+            {getTeamPicks(dire).map(hero => (
+              <div key={hero}>
+                <p>{hero}: {renderHeroWinRate(hero)}</p>
+              </div>
+            ))}
           </div>
 
           {/* Draft Timer and Active Selection */}
           <div className="absolute text-center" style={{ bottom: '150px', left: '50%', transform: 'translateX(-50%)' }}>
-            <h2 className="text-2xl font-bold text-yellow-400">Draft Timer: {draft.activeteam_time_remaining || 0}s</h2>
+            <h2 className="text-2xl font-bold text-yellow-400">
+              Draft Timer: {draft.activeteam_time_remaining || 0}s
+              {activeTeam === 'Radiant' && draft.activeteam_time_remaining === 0 && draft.radiant_bonus_time > 0 && (
+                <span className="text-green-400 reserve-time-active"> (Reserve Time: {formatTime(draft.radiant_bonus_time || 0)}s)</span>
+              )}
+              {activeTeam === 'Dire' && draft.activeteam_time_remaining === 0 && draft.dire_bonus_time > 0 && (
+                <span className="text-red-400 reserve-time-active"> (Reserve Time: {formatTime(draft.dire_bonus_time || 0)}s)</span>
+              )}
+            </h2>
             <p className="font-semibold text-gray-300 text-md">
               Radiant Reserve :
               <span className={`${activeTeam === 'Radiant' && draft.activeteam_time_remaining === 0 && draft.radiant_bonus_time > 0 ? 'text-green-400 glow-effect' : 'text-green-400'}`}>
@@ -260,16 +340,18 @@ export default function DraftOverlay() {
           {/* Radiant Bans */}
           <div className="absolute" style={{ bottom: '100px', left: '100px' }}>
             <h1 className="text-lg font-bold text-green-400">{radiantTeamInfo.name} Bans</h1>
-            {renderBannedHeroes(getTeamBans(radiant))}
+            {renderBannedHeroes(getTeamBans(radiant), '80px', 7, nextRadiantBanSlot)}
           </div>
 
           {/* Dire Bans */}
           <div className="absolute" style={{ bottom: '100px', right: '100px' }}>
             <h1 className="text-lg font-bold text-red-400">{direTeamInfo.name} Bans</h1>
-            {renderBannedHeroes(getTeamBans(dire))}
+            {renderBannedHeroes(getTeamBans(dire), '80px', 7, nextDireBanSlot)}
           </div>
         </div>
       )}
     </div>
   );
-}
+};
+
+export default DraftOverlay;

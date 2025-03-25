@@ -45,7 +45,7 @@ const teams = {
   },
   croakercamp: {
     name: 'Croaker Camp',
-    logo: 'teamlogos/croaker_camp.png',
+    logo: 'teamlogos/wongs_bakery.png',
     players: [
       { id: 1, name: 'Onix' },
       { id: 2, name: 'Poddy' },
@@ -55,10 +55,10 @@ const teams = {
     ],
   },
   wongs: {
-    name: 'Wong\'s',
-    logo: 'teamlogos/wongs.png',
+    name: 'Wongs Bakery 罌粟',
+    logo: 'teamlogos/wongs_bakery.png',
     players: [
-      { id: 1, name: 'Maniac' },
+      { id: 1, name: 'M<>niac' },
       { id: 2, name: 'K4mky' },
       { id: 3, name: 'Shirx' },
       { id: 4, name: 'Nagi' },
@@ -129,6 +129,28 @@ const teams = {
       { id: 3, name: 'BrionFX' },
       { id: 4, name: '' },
       { id: 5, name: '' },
+    ],
+  },
+  teamliquid: {
+    name: 'Team Liquid',
+    logo: 'teamlogos/team_liquid.png',
+    players: [
+      { id: 1, name: 'Insania' },
+      { id: 2, name: 'EI SaberLightO' },
+      { id: 3, name: 'Nisha' },
+      { id: 4, name: 'Boxi' },
+      { id: 5, name: 'm1CKa' },
+    ],
+  },
+  tundraesports: {
+    name: 'Tundra Esports',
+    logo: 'teamlogos/tundra_esports.png',
+    players: [
+      { id: 1, name: 'Skiter' },
+      { id: 2, name: 'Nine' },
+      { id: 3, name: '33' },
+      { id: 4, name: 'Fata' },
+      { id: 5, name: 'Sneyking' },
     ],
   },
 };

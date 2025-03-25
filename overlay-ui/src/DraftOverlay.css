@@ -65,3 +65,36 @@
 .arrow-fade-in-dire {
   animation: arrow-fade-in-dire 0.5s ease-in-out forwards;
 }
+
+@keyframes reserveTimeBlink {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.reserve-time-active {
+  animation: reserveTimeBlink 1s infinite;
+}
+
+.team-logo {
+  transition: filter 0.3s ease;
+}
+
+.team-logo.active-team {
+  filter: drop-shadow(0 0 10px green);
+}
+
+.team-logo.active-team.red {
+  filter: drop-shadow(0 0 10px red);
+}
+
+.next-slot {
+  border: 2px dashed #ffd700; /* Gold dashed border */
+  animation: next-slot-blink 1s infinite;
+}
+
+@keyframes next-slot-blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
