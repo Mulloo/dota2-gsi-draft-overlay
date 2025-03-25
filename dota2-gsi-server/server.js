@@ -3,6 +3,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require('path');
+const https = require('follow-redirects').https;
 
 const app = express();
 const port = 4000;
@@ -25,22 +26,44 @@ app.post('/league/heroes', (req, res) => {
   const leagueId = req.body.league_id;
   console.log('Received league ID:', leagueId);
 
-  // Simulate fetching data from an external API
-  const heroStatistics = {
-    hero_statistics: {
-      heroes: [
-        { name: 'tinker', winrate: 50 },
-        { name: 'sven', winrate: 55 },
-        // Add more hero data as needed
-      ]
-    }
+  const options = {
+    method: 'POST',
+    hostname: 'test.api.imprint.gg',
+    path: '/league/heroes',
+    headers: {
+      'token': '28ccf915-fb81-4b04-9716-8d772d24b5c3', // Ensure this token is valid
+      'Content-Type': 'application/json'
+    },
+    maxRedirects: 20
   };
 
-  // Save data to a JSON file
-  const filePath = path.join(__dirname, 'heroStatistics.json');
-  fs.writeFileSync(filePath, JSON.stringify(heroStatistics, null, 2));
+  const apiReq = https.request(options, function (apiRes) {
+    let chunks = [];
 
-  res.json(heroStatistics);
+    apiRes.on("data", function (chunk) {
+      chunks.push(chunk);
+    });
+
+    apiRes.on("end", function () {
+      const body = Buffer.concat(chunks).toString();
+      const heroStatistics = JSON.parse(body);
+
+      // Save data to a JSON file
+      const filePath = path.join(__dirname, 'heroStatistics.json');
+      fs.writeFileSync(filePath, JSON.stringify(heroStatistics, null, 2));
+
+      res.json(heroStatistics);
+    });
+
+    apiRes.on("error", function (error) {
+      console.error('Error fetching hero statistics:', error);
+      res.status(500).json({ error: error.message });
+    });
+  });
+
+  const postData = JSON.stringify({ "league_id": leagueId });
+  apiReq.write(postData);
+  apiReq.end();
 });
 
 app.listen(port, () => {
