@@ -68,7 +68,7 @@ const DraftOverlay = ({ leagueId }) => {
   useEffect(() => {
     const getHeroStatistics = async () => {
       console.log('Calling fetchLeagueHeroStatistics'); // Log before calling the function
-      const data = await fetchLeagueHeroStatistics(leagueId); // Replace with the actual league ID
+      const data = await fetchLeagueHeroStatistics(leagueId); // Use the actual league ID
       console.log('API Response:', data); // Log the API response
       setHeroStatistics(data);
     };
@@ -78,6 +78,17 @@ const DraftOverlay = ({ leagueId }) => {
       getHeroStatistics();
     }
   }, [gameState, leagueId]);
+
+  useEffect(() => {
+    const getHeroStatistics = async () => {
+      console.log('Calling fetchLeagueHeroStatistics'); // Log before calling the function
+      const data = await fetchLeagueHeroStatistics(leagueId); // Use the actual league ID
+      console.log('API Response:', data); // Log the API response
+      setHeroStatistics(data);
+    };
+
+    getHeroStatistics();
+  }, [leagueId]);
 
   useEffect(() => {
     heroStatistics.forEach(hero => {

@@ -1,4 +1,3 @@
-// filepath: e:\GSI\dota2-gsi-draft-overlay\overlay-ui\src\setupProxy.js
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
 module.exports = function(app) {
@@ -9,6 +8,9 @@ module.exports = function(app) {
       changeOrigin: true,
       pathRewrite: {
         '^/league/heroes': '/league/heroes',
+      },
+      onProxyReq: (proxyReq) => {
+        proxyReq.setHeader('Content-Type', 'application/json');
       },
     })
   );
