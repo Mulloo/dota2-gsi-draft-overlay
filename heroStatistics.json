@@ -1,0 +1,3337 @@
+{
+  "league_id": 17417,
+  "league_name": "SLAM II",
+  "hero_statistics": {
+    "match_count": 43,
+    "hero_count": 75,
+    "hero_variance": "17.4%",
+    "heroes": [
+      {
+        "name": "Tidehunter",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_tidehunter.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_tidehunter.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_tidehunter.png",
+        "raw_name": "npc_dota_hero_tidehunter",
+        "match_count": 1,
+        "wins": 1,
+        "losses": 0,
+        "winrate": "100.0%",
+        "average_kills": 6,
+        "average_deaths": 1,
+        "average_assists": 12,
+        "average_net_worth": 12458,
+        "average_imprint_rating": 95.2,
+        "facet_tally": [
+          {
+            "name": "Kraken Swell",
+            "icon_src": "https://cdn.imprint.gg/facets/armor.png",
+            "gradient": {
+              "left_colour": "#A2B23E",
+              "right_colour": "#2D5A18"
+            },
+            "match_count": 1,
+            "wins": 1,
+            "losses": 0,
+            "win_rate": "100.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 3,
+            "match_count": 1,
+            "wins": 1,
+            "losses": 0,
+            "win_rate": "100.0%"
+          }
+        ]
+      },
+      {
+        "name": "Medusa",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_medusa.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_medusa.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_medusa.png",
+        "raw_name": "npc_dota_hero_medusa",
+        "match_count": 1,
+        "wins": 1,
+        "losses": 0,
+        "winrate": "100.0%",
+        "average_kills": 6,
+        "average_deaths": 3,
+        "average_assists": 9,
+        "average_net_worth": 32853,
+        "average_imprint_rating": 34.7,
+        "facet_tally": [
+          {
+            "name": "Venomous Volley",
+            "icon_src": "https://cdn.imprint.gg/facets/slow.png",
+            "gradient": {
+              "left_colour": "#CAC194",
+              "right_colour": "#433828"
+            },
+            "match_count": 1,
+            "wins": 1,
+            "losses": 0,
+            "win_rate": "100.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 1,
+            "match_count": 1,
+            "wins": 1,
+            "losses": 0,
+            "win_rate": "100.0%"
+          }
+        ]
+      },
+      {
+        "name": "Nature's Prophet",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_furion.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_furion.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_furion.png",
+        "raw_name": "npc_dota_hero_furion",
+        "match_count": 1,
+        "wins": 0,
+        "losses": 1,
+        "winrate": "0.0%",
+        "average_kills": 7,
+        "average_deaths": 4,
+        "average_assists": 10,
+        "average_net_worth": 30535,
+        "average_imprint_rating": 47.6,
+        "facet_tally": [
+          {
+            "name": "Ironwood Treant",
+            "icon_src": "https://cdn.imprint.gg/facets/siege.png",
+            "gradient": {
+              "left_colour": "#6BAEBC",
+              "right_colour": "#135459"
+            },
+            "match_count": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": "0.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 2,
+            "match_count": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": "0.0%"
+          }
+        ]
+      },
+      {
+        "name": "Dark Seer",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_dark_seer.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_dark_seer.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_dark_seer.png",
+        "raw_name": "npc_dota_hero_dark_seer",
+        "match_count": 1,
+        "wins": 1,
+        "losses": 0,
+        "winrate": "100.0%",
+        "average_kills": 15,
+        "average_deaths": 4,
+        "average_assists": 23,
+        "average_net_worth": 25020,
+        "average_imprint_rating": 98,
+        "facet_tally": [
+          {
+            "name": "Quick Wit",
+            "icon_src": "https://cdn.imprint.gg/facets/damage.png",
+            "gradient": {
+              "left_colour": "#ADB6BE",
+              "right_colour": "#4E5557"
+            },
+            "match_count": 1,
+            "wins": 1,
+            "losses": 0,
+            "win_rate": "100.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 3,
+            "match_count": 1,
+            "wins": 1,
+            "losses": 0,
+            "win_rate": "100.0%"
+          }
+        ]
+      },
+      {
+        "name": "Underlord",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_abyssal_underlord.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_abyssal_underlord.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_abyssal_underlord.png",
+        "raw_name": "npc_dota_hero_abyssal_underlord",
+        "match_count": 1,
+        "wins": 0,
+        "losses": 1,
+        "winrate": "0.0%",
+        "average_kills": 2,
+        "average_deaths": 8,
+        "average_assists": 11,
+        "average_net_worth": 12621,
+        "average_imprint_rating": 32.2,
+        "facet_tally": [
+          {
+            "name": "Abyssal Horde",
+            "icon_src": "https://cdn.imprint.gg/facets/summons.png",
+            "gradient": {
+              "left_colour": "#C3A99A",
+              "right_colour": "#4D352B"
+            },
+            "match_count": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": "0.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 3,
+            "match_count": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": "0.0%"
+          }
+        ]
+      },
+      {
+        "name": "Earth Spirit",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_earth_spirit.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_earth_spirit.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_earth_spirit.png",
+        "raw_name": "npc_dota_hero_earth_spirit",
+        "match_count": 1,
+        "wins": 1,
+        "losses": 0,
+        "winrate": "100.0%",
+        "average_kills": 9,
+        "average_deaths": 3,
+        "average_assists": 20,
+        "average_net_worth": 23573,
+        "average_imprint_rating": 50.5,
+        "facet_tally": [
+          {
+            "name": "Resonance",
+            "icon_src": "https://cdn.imprint.gg/facets/damage.png",
+            "gradient": {
+              "left_colour": "#A2B23E",
+              "right_colour": "#2D5A18"
+            },
+            "match_count": 1,
+            "wins": 1,
+            "losses": 0,
+            "win_rate": "100.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 2,
+            "match_count": 1,
+            "wins": 1,
+            "losses": 0,
+            "win_rate": "100.0%"
+          }
+        ]
+      },
+      {
+        "name": "Naga Siren",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_naga_siren.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_naga_siren.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_naga_siren.png",
+        "raw_name": "npc_dota_hero_naga_siren",
+        "match_count": 1,
+        "wins": 0,
+        "losses": 1,
+        "winrate": "0.0%",
+        "average_kills": 4,
+        "average_deaths": 3,
+        "average_assists": 5,
+        "average_net_worth": 18858,
+        "average_imprint_rating": 49.4,
+        "facet_tally": [
+          {
+            "name": "Rip Tide",
+            "icon_src": "https://cdn.imprint.gg/facets/armor_broken.png",
+            "gradient": {
+              "left_colour": "#CAC194",
+              "right_colour": "#433828"
+            },
+            "match_count": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": "0.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 1,
+            "match_count": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": "0.0%"
+          }
+        ]
+      },
+      {
+        "name": "Jakiro",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_jakiro.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_jakiro.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_jakiro.png",
+        "raw_name": "npc_dota_hero_jakiro",
+        "match_count": 1,
+        "wins": 1,
+        "losses": 0,
+        "winrate": "100.0%",
+        "average_kills": 8,
+        "average_deaths": 7,
+        "average_assists": 18,
+        "average_net_worth": 12047,
+        "average_imprint_rating": 54,
+        "facet_tally": [
+          {
+            "name": "Liquid Frost Facet",
+            "icon_src": "https://cdn.imprint.gg/facets/snowflake.png",
+            "gradient": {
+              "left_colour": "#547EA6",
+              "right_colour": "#2A385E"
+            },
+            "match_count": 1,
+            "wins": 1,
+            "losses": 0,
+            "win_rate": "100.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 5,
+            "match_count": 1,
+            "wins": 1,
+            "losses": 0,
+            "win_rate": "100.0%"
+          }
+        ]
+      },
+      {
+        "name": "Weaver",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_weaver.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_weaver.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_weaver.png",
+        "raw_name": "npc_dota_hero_weaver",
+        "match_count": 1,
+        "wins": 0,
+        "losses": 1,
+        "winrate": "0.0%",
+        "average_kills": 3,
+        "average_deaths": 7,
+        "average_assists": 3,
+        "average_net_worth": 11381,
+        "average_imprint_rating": 20.5,
+        "facet_tally": [
+          {
+            "name": "Skitterstep",
+            "icon_src": "https://cdn.imprint.gg/facets/speed.png",
+            "gradient": {
+              "left_colour": "#9F3C3C",
+              "right_colour": "#4A2040"
+            },
+            "match_count": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": "0.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 1,
+            "match_count": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": "0.0%"
+          }
+        ]
+      },
+      {
+        "name": "Spectre",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_spectre.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_spectre.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_spectre.png",
+        "raw_name": "npc_dota_hero_spectre",
+        "match_count": 1,
+        "wins": 0,
+        "losses": 1,
+        "winrate": "0.0%",
+        "average_kills": 11,
+        "average_deaths": 6,
+        "average_assists": 6,
+        "average_net_worth": 26948,
+        "average_imprint_rating": 49.9,
+        "facet_tally": [
+          {
+            "name": "Twist the Knife",
+            "icon_src": "https://cdn.imprint.gg/facets/nuke.png",
+            "gradient": {
+              "left_colour": "#675CAE",
+              "right_colour": "#261C44"
+            },
+            "match_count": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": "0.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 1,
+            "match_count": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": "0.0%"
+          }
+        ]
+      },
+      {
+        "name": "Leshrac",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_leshrac.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_leshrac.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_leshrac.png",
+        "raw_name": "npc_dota_hero_leshrac",
+        "match_count": 1,
+        "wins": 1,
+        "losses": 0,
+        "winrate": "100.0%",
+        "average_kills": 9,
+        "average_deaths": 3,
+        "average_assists": 12,
+        "average_net_worth": 30116,
+        "average_imprint_rating": 38.9,
+        "facet_tally": [
+          {
+            "name": "Misanthropy",
+            "icon_src": "https://cdn.imprint.gg/facets/nuke.png",
+            "gradient": {
+              "left_colour": "#B57789",
+              "right_colour": "#412755"
+            },
+            "match_count": 1,
+            "wins": 1,
+            "losses": 0,
+            "win_rate": "100.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 2,
+            "match_count": 1,
+            "wins": 1,
+            "losses": 0,
+            "win_rate": "100.0%"
+          }
+        ]
+      },
+      {
+        "name": "Lion",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_lion.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_lion.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_lion.png",
+        "raw_name": "npc_dota_hero_lion",
+        "match_count": 1,
+        "wins": 1,
+        "losses": 0,
+        "winrate": "100.0%",
+        "average_kills": 3,
+        "average_deaths": 2,
+        "average_assists": 21,
+        "average_net_worth": 13504,
+        "average_imprint_rating": 65.8,
+        "facet_tally": [
+          {
+            "name": "Fist of Death",
+            "icon_src": "https://cdn.imprint.gg/facets/fist.png",
+            "gradient": {
+              "left_colour": "#A3735E",
+              "right_colour": "#4F2A25"
+            },
+            "match_count": 1,
+            "wins": 1,
+            "losses": 0,
+            "win_rate": "100.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 4,
+            "match_count": 1,
+            "wins": 1,
+            "losses": 0,
+            "win_rate": "100.0%"
+          }
+        ]
+      },
+      {
+        "name": "Sven",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_sven.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_sven.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_sven.png",
+        "raw_name": "npc_dota_hero_sven",
+        "match_count": 1,
+        "wins": 0,
+        "losses": 1,
+        "winrate": "0.0%",
+        "average_kills": 3,
+        "average_deaths": 4,
+        "average_assists": 1,
+        "average_net_worth": 14839,
+        "average_imprint_rating": 55.8,
+        "facet_tally": [
+          {
+            "name": "Wrath of God",
+            "icon_src": "https://cdn.imprint.gg/facets/strength.png",
+            "gradient": {
+              "left_colour": "#9F3C3C",
+              "right_colour": "#4A2040"
+            },
+            "match_count": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": "0.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 1,
+            "match_count": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": "0.0%"
+          }
+        ]
+      },
+      {
+        "name": "Storm Spirit",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_storm_spirit.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_storm_spirit.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_storm_spirit.png",
+        "raw_name": "npc_dota_hero_storm_spirit",
+        "match_count": 2,
+        "wins": 1,
+        "losses": 1,
+        "winrate": "50.0%",
+        "average_kills": 11,
+        "average_deaths": 4.5,
+        "average_assists": 5,
+        "average_net_worth": 20279,
+        "average_imprint_rating": 46.9,
+        "facet_tally": [
+          {
+            "name": "Static Slide",
+            "icon_src": "https://cdn.imprint.gg/facets/movement.png",
+            "gradient": {
+              "left_colour": "#ADB6BE",
+              "right_colour": "#4E5557"
+            },
+            "match_count": 2,
+            "wins": 1,
+            "losses": 1,
+            "win_rate": "50.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 2,
+            "match_count": 2,
+            "wins": 1,
+            "losses": 1,
+            "win_rate": "50.0%"
+          }
+        ]
+      },
+      {
+        "name": "Hoodwink",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_hoodwink.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_hoodwink.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_hoodwink.png",
+        "raw_name": "npc_dota_hero_hoodwink",
+        "match_count": 2,
+        "wins": 1,
+        "losses": 1,
+        "winrate": "50.0%",
+        "average_kills": 2.5,
+        "average_deaths": 7,
+        "average_assists": 14,
+        "average_net_worth": 10255.5,
+        "average_imprint_rating": 41.5,
+        "facet_tally": [
+          {
+            "name": "Treebounce Trickshot",
+            "icon_src": "https://cdn.imprint.gg/facets/tree.png",
+            "gradient": {
+              "left_colour": "#A2B23E",
+              "right_colour": "#2D5A18"
+            },
+            "match_count": 2,
+            "wins": 1,
+            "losses": 1,
+            "win_rate": "50.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 4,
+            "match_count": 2,
+            "wins": 1,
+            "losses": 1,
+            "win_rate": "50.0%"
+          }
+        ]
+      },
+      {
+        "name": "Queen of Pain",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_queenofpain.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_queenofpain.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_queenofpain.png",
+        "raw_name": "npc_dota_hero_queenofpain",
+        "match_count": 2,
+        "wins": 0,
+        "losses": 2,
+        "winrate": "0.0%",
+        "average_kills": 4,
+        "average_deaths": 6,
+        "average_assists": 3.5,
+        "average_net_worth": 10766,
+        "average_imprint_rating": 20.9,
+        "facet_tally": [
+          {
+            "name": "Masochist",
+            "icon_src": "https://cdn.imprint.gg/facets/nuke.png",
+            "gradient": {
+              "left_colour": "#9F3C3C",
+              "right_colour": "#4A2040"
+            },
+            "match_count": 2,
+            "wins": 0,
+            "losses": 2,
+            "win_rate": "0.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 2,
+            "match_count": 2,
+            "wins": 0,
+            "losses": 2,
+            "win_rate": "0.0%"
+          }
+        ]
+      },
+      {
+        "name": "Slark",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_slark.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_slark.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_slark.png",
+        "raw_name": "npc_dota_hero_slark",
+        "match_count": 2,
+        "wins": 0,
+        "losses": 2,
+        "winrate": "0.0%",
+        "average_kills": 0.5,
+        "average_deaths": 6,
+        "average_assists": 2.5,
+        "average_net_worth": 9902,
+        "average_imprint_rating": 24.5,
+        "facet_tally": [
+          {
+            "name": "Leeching Leash",
+            "icon_src": "https://cdn.imprint.gg/facets/agility.png",
+            "gradient": {
+              "left_colour": "#A2B23E",
+              "right_colour": "#2D5A18"
+            },
+            "match_count": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": "0.0%"
+          },
+          {
+            "name": "Dark Reef Renegade",
+            "icon_src": "https://cdn.imprint.gg/facets/cooldown.png",
+            "gradient": {
+              "left_colour": "#6BAEBC",
+              "right_colour": "#135459"
+            },
+            "match_count": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": "0.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 1,
+            "match_count": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": "0.0%"
+          },
+          {
+            "position": 4,
+            "match_count": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": "0.0%"
+          }
+        ]
+      },
+      {
+        "name": "Alchemist",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_alchemist.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_alchemist.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_alchemist.png",
+        "raw_name": "npc_dota_hero_alchemist",
+        "match_count": 2,
+        "wins": 1,
+        "losses": 1,
+        "winrate": "50.0%",
+        "average_kills": 7.5,
+        "average_deaths": 3,
+        "average_assists": 12.5,
+        "average_net_worth": 28365,
+        "average_imprint_rating": 65.9,
+        "facet_tally": [
+          {
+            "name": "Seed Money",
+            "icon_src": "https://cdn.imprint.gg/facets/gold.png",
+            "gradient": {
+              "left_colour": "#C8A45C",
+              "right_colour": "#6F3D21"
+            },
+            "match_count": 2,
+            "wins": 1,
+            "losses": 1,
+            "win_rate": "50.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 1,
+            "match_count": 2,
+            "wins": 1,
+            "losses": 1,
+            "win_rate": "50.0%"
+          }
+        ]
+      },
+      {
+        "name": "Broodmother",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_broodmother.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_broodmother.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_broodmother.png",
+        "raw_name": "npc_dota_hero_broodmother",
+        "match_count": 2,
+        "wins": 1,
+        "losses": 1,
+        "winrate": "50.0%",
+        "average_kills": 6,
+        "average_deaths": 5.5,
+        "average_assists": 6,
+        "average_net_worth": 12768.5,
+        "average_imprint_rating": 47.9,
+        "facet_tally": [
+          {
+            "name": "Feeding Frenzy",
+            "icon_src": "https://cdn.imprint.gg/facets/summons.png",
+            "gradient": {
+              "left_colour": "#9F3C3C",
+              "right_colour": "#4A2040"
+            },
+            "match_count": 2,
+            "wins": 1,
+            "losses": 1,
+            "win_rate": "50.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 1,
+            "match_count": 1,
+            "wins": 1,
+            "losses": 0,
+            "win_rate": "100.0%"
+          },
+          {
+            "position": 3,
+            "match_count": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": "0.0%"
+          }
+        ]
+      },
+      {
+        "name": "Viper",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_viper.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_viper.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_viper.png",
+        "raw_name": "npc_dota_hero_viper",
+        "match_count": 2,
+        "wins": 0,
+        "losses": 2,
+        "winrate": "0.0%",
+        "average_kills": 11,
+        "average_deaths": 9.5,
+        "average_assists": 13.5,
+        "average_net_worth": 19072.5,
+        "average_imprint_rating": 67.8,
+        "facet_tally": [
+          {
+            "name": "Poison Burst",
+            "icon_src": "https://cdn.imprint.gg/facets/area_of_effect.png",
+            "gradient": {
+              "left_colour": "#A2B23E",
+              "right_colour": "#2D5A18"
+            },
+            "match_count": 2,
+            "wins": 0,
+            "losses": 2,
+            "win_rate": "0.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 2,
+            "match_count": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": "0.0%"
+          },
+          {
+            "position": 3,
+            "match_count": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": "0.0%"
+          }
+        ]
+      },
+      {
+        "name": "Sand King",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_sand_king.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_sand_king.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_sand_king.png",
+        "raw_name": "npc_dota_hero_sand_king",
+        "match_count": 2,
+        "wins": 2,
+        "losses": 0,
+        "winrate": "100.0%",
+        "average_kills": 9,
+        "average_deaths": 1.5,
+        "average_assists": 17,
+        "average_net_worth": 18193,
+        "average_imprint_rating": 92.1,
+        "facet_tally": [
+          {
+            "name": "Sandshroud",
+            "icon_src": "https://cdn.imprint.gg/facets/vision.png",
+            "gradient": {
+              "left_colour": "#ADB6BE",
+              "right_colour": "#4E5557"
+            },
+            "match_count": 2,
+            "wins": 2,
+            "losses": 0,
+            "win_rate": "100.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 3,
+            "match_count": 2,
+            "wins": 2,
+            "losses": 0,
+            "win_rate": "100.0%"
+          }
+        ]
+      },
+      {
+        "name": "Marci",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_marci.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_marci.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_marci.png",
+        "raw_name": "npc_dota_hero_marci",
+        "match_count": 2,
+        "wins": 1,
+        "losses": 1,
+        "winrate": "50.0%",
+        "average_kills": 8,
+        "average_deaths": 4.5,
+        "average_assists": 7.5,
+        "average_net_worth": 20630.5,
+        "average_imprint_rating": 35.8,
+        "facet_tally": [
+          {
+            "name": "Sidekick",
+            "icon_src": "https://cdn.imprint.gg/facets/healing.png",
+            "gradient": {
+              "left_colour": "#ADB6BE",
+              "right_colour": "#4E5557"
+            },
+            "match_count": 2,
+            "wins": 1,
+            "losses": 1,
+            "win_rate": "50.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 1,
+            "match_count": 2,
+            "wins": 1,
+            "losses": 1,
+            "win_rate": "50.0%"
+          }
+        ]
+      },
+      {
+        "name": "Dazzle",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_dazzle.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_dazzle.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_dazzle.png",
+        "raw_name": "npc_dota_hero_dazzle",
+        "match_count": 2,
+        "wins": 1,
+        "losses": 1,
+        "winrate": "50.0%",
+        "average_kills": 2,
+        "average_deaths": 10,
+        "average_assists": 12,
+        "average_net_worth": 10041,
+        "average_imprint_rating": 24.7,
+        "facet_tally": [
+          {
+            "name": "Poison Bloom",
+            "icon_src": "https://cdn.imprint.gg/facets/ricochet.png",
+            "gradient": {
+              "left_colour": "#B57789",
+              "right_colour": "#412755"
+            },
+            "match_count": 2,
+            "wins": 1,
+            "losses": 1,
+            "win_rate": "50.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 5,
+            "match_count": 2,
+            "wins": 1,
+            "losses": 1,
+            "win_rate": "50.0%"
+          }
+        ]
+      },
+      {
+        "name": "Ember Spirit",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_ember_spirit.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_ember_spirit.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_ember_spirit.png",
+        "raw_name": "npc_dota_hero_ember_spirit",
+        "match_count": 3,
+        "wins": 2,
+        "losses": 1,
+        "winrate": "66.7%",
+        "average_kills": 8.333333333333334,
+        "average_deaths": 3.6666666666666665,
+        "average_assists": 11.666666666666666,
+        "average_net_worth": 18286.666666666668,
+        "average_imprint_rating": 52.5,
+        "facet_tally": [
+          {
+            "name": "Double Impact",
+            "icon_src": "https://cdn.imprint.gg/facets/fist.png",
+            "gradient": {
+              "left_colour": "#9F3C3C",
+              "right_colour": "#4A2040"
+            },
+            "match_count": 3,
+            "wins": 2,
+            "losses": 1,
+            "win_rate": "66.7%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 2,
+            "match_count": 3,
+            "wins": 2,
+            "losses": 1,
+            "win_rate": "66.7%"
+          }
+        ]
+      },
+      {
+        "name": "Shadow Shaman",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_shadow_shaman.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_shadow_shaman.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_shadow_shaman.png",
+        "raw_name": "npc_dota_hero_shadow_shaman",
+        "match_count": 3,
+        "wins": 1,
+        "losses": 2,
+        "winrate": "33.3%",
+        "average_kills": 2,
+        "average_deaths": 8.666666666666666,
+        "average_assists": 12.333333333333334,
+        "average_net_worth": 11825.333333333334,
+        "average_imprint_rating": 34,
+        "facet_tally": [
+          {
+            "name": "Cluster Cluck",
+            "icon_src": "https://cdn.imprint.gg/facets/chicken.png",
+            "gradient": {
+              "left_colour": "#C6A158",
+              "right_colour": "#604928"
+            },
+            "match_count": 3,
+            "wins": 1,
+            "losses": 2,
+            "win_rate": "33.3%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 5,
+            "match_count": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": "0.0%"
+          },
+          {
+            "position": 4,
+            "match_count": 2,
+            "wins": 1,
+            "losses": 1,
+            "win_rate": "50.0%"
+          }
+        ]
+      },
+      {
+        "name": "Dark Willow",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_dark_willow.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_dark_willow.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_dark_willow.png",
+        "raw_name": "npc_dota_hero_dark_willow",
+        "match_count": 3,
+        "wins": 3,
+        "losses": 0,
+        "winrate": "100.0%",
+        "average_kills": 5.333333333333333,
+        "average_deaths": 2.3333333333333335,
+        "average_assists": 17,
+        "average_net_worth": 8774.666666666666,
+        "average_imprint_rating": 54.8,
+        "facet_tally": [
+          {
+            "name": "Throwing Shade",
+            "icon_src": "https://cdn.imprint.gg/facets/damage.png",
+            "gradient": {
+              "left_colour": "#9C70A4",
+              "right_colour": "#282752"
+            },
+            "match_count": 3,
+            "wins": 3,
+            "losses": 0,
+            "win_rate": "100.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 4,
+            "match_count": 3,
+            "wins": 3,
+            "losses": 0,
+            "win_rate": "100.0%"
+          }
+        ]
+      },
+      {
+        "name": "Invoker",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_invoker.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_invoker.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_invoker.png",
+        "raw_name": "npc_dota_hero_invoker",
+        "match_count": 3,
+        "wins": 2,
+        "losses": 1,
+        "winrate": "66.7%",
+        "average_kills": 8.666666666666666,
+        "average_deaths": 2.6666666666666665,
+        "average_assists": 10.666666666666666,
+        "average_net_worth": 20431.333333333332,
+        "average_imprint_rating": 53.9,
+        "facet_tally": [
+          {
+            "name": "Elitist",
+            "icon_src": "https://cdn.imprint.gg/facets/invoker_active.png",
+            "gradient": {
+              "left_colour": "#565C61",
+              "right_colour": "#1B1B21"
+            },
+            "match_count": 3,
+            "wins": 2,
+            "losses": 1,
+            "win_rate": "66.7%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 2,
+            "match_count": 3,
+            "wins": 2,
+            "losses": 1,
+            "win_rate": "66.7%"
+          }
+        ]
+      },
+      {
+        "name": "Tusk",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_tusk.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_tusk.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_tusk.png",
+        "raw_name": "npc_dota_hero_tusk",
+        "match_count": 3,
+        "wins": 2,
+        "losses": 1,
+        "winrate": "66.7%",
+        "average_kills": 2.3333333333333335,
+        "average_deaths": 9.666666666666666,
+        "average_assists": 14.333333333333334,
+        "average_net_worth": 9649,
+        "average_imprint_rating": 24.1,
+        "facet_tally": [
+          {
+            "name": "Tag Team",
+            "icon_src": "https://cdn.imprint.gg/facets/damage.png",
+            "gradient": {
+              "left_colour": "#94B5BA",
+              "right_colour": "#385B59"
+            },
+            "match_count": 3,
+            "wins": 2,
+            "losses": 1,
+            "win_rate": "66.7%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 4,
+            "match_count": 3,
+            "wins": 2,
+            "losses": 1,
+            "win_rate": "66.7%"
+          }
+        ]
+      },
+      {
+        "name": "Mars",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_mars.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_mars.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_mars.png",
+        "raw_name": "npc_dota_hero_mars",
+        "match_count": 3,
+        "wins": 0,
+        "losses": 3,
+        "winrate": "0.0%",
+        "average_kills": 1,
+        "average_deaths": 8,
+        "average_assists": 13.333333333333334,
+        "average_net_worth": 18323,
+        "average_imprint_rating": 30.6,
+        "facet_tally": [
+          {
+            "name": "Blood Sport",
+            "icon_src": "https://cdn.imprint.gg/facets/no_vision.png",
+            "gradient": {
+              "left_colour": "#C8A45C",
+              "right_colour": "#6F3D21"
+            },
+            "match_count": 3,
+            "wins": 0,
+            "losses": 3,
+            "win_rate": "0.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 3,
+            "match_count": 3,
+            "wins": 0,
+            "losses": 3,
+            "win_rate": "0.0%"
+          }
+        ]
+      },
+      {
+        "name": "Primal Beast",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_primal_beast.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_primal_beast.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_primal_beast.png",
+        "raw_name": "npc_dota_hero_primal_beast",
+        "match_count": 3,
+        "wins": 1,
+        "losses": 2,
+        "winrate": "33.3%",
+        "average_kills": 2,
+        "average_deaths": 6.666666666666667,
+        "average_assists": 10.333333333333334,
+        "average_net_worth": 15726.666666666666,
+        "average_imprint_rating": 29.2,
+        "facet_tally": [
+          {
+            "name": "Romp n' Stomp",
+            "icon_src": "https://cdn.imprint.gg/facets/speed.png",
+            "gradient": {
+              "left_colour": "#9F3C3C",
+              "right_colour": "#4A2040"
+            },
+            "match_count": 3,
+            "wins": 1,
+            "losses": 2,
+            "win_rate": "33.3%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 3,
+            "match_count": 2,
+            "wins": 1,
+            "losses": 1,
+            "win_rate": "50.0%"
+          },
+          {
+            "position": 2,
+            "match_count": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": "0.0%"
+          }
+        ]
+      },
+      {
+        "name": "Huskar",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_huskar.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_huskar.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_huskar.png",
+        "raw_name": "npc_dota_hero_huskar",
+        "match_count": 4,
+        "wins": 4,
+        "losses": 0,
+        "winrate": "100.0%",
+        "average_kills": 7.5,
+        "average_deaths": 2.75,
+        "average_assists": 9.75,
+        "average_net_worth": 23783.75,
+        "average_imprint_rating": 66.6,
+        "facet_tally": [
+          {
+            "name": "Cauterize",
+            "icon_src": "https://cdn.imprint.gg/facets/broken_chain.png",
+            "gradient": {
+              "left_colour": "#9F3C3C",
+              "right_colour": "#4A2040"
+            },
+            "match_count": 4,
+            "wins": 4,
+            "losses": 0,
+            "win_rate": "100.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 2,
+            "match_count": 4,
+            "wins": 4,
+            "losses": 0,
+            "win_rate": "100.0%"
+          }
+        ]
+      },
+      {
+        "name": "Timbersaw",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_shredder.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_shredder.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_shredder.png",
+        "raw_name": "npc_dota_hero_shredder",
+        "match_count": 4,
+        "wins": 2,
+        "losses": 2,
+        "winrate": "50.0%",
+        "average_kills": 5,
+        "average_deaths": 4,
+        "average_assists": 7.75,
+        "average_net_worth": 15402.75,
+        "average_imprint_rating": 44.1,
+        "facet_tally": [
+          {
+            "name": "Twisted Chakram",
+            "icon_src": "https://cdn.imprint.gg/facets/spinning.png",
+            "gradient": {
+              "left_colour": "#954533",
+              "right_colour": "#452732"
+            },
+            "match_count": 2,
+            "wins": 1,
+            "losses": 1,
+            "win_rate": "50.0%"
+          },
+          {
+            "name": "Shredder",
+            "icon_src": "https://cdn.imprint.gg/facets/tree.png",
+            "gradient": {
+              "left_colour": "#A2B23E",
+              "right_colour": "#2D5A18"
+            },
+            "match_count": 2,
+            "wins": 1,
+            "losses": 1,
+            "win_rate": "50.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 3,
+            "match_count": 4,
+            "wins": 2,
+            "losses": 2,
+            "win_rate": "50.0%"
+          }
+        ]
+      },
+      {
+        "name": "Venomancer",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_venomancer.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_venomancer.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_venomancer.png",
+        "raw_name": "npc_dota_hero_venomancer",
+        "match_count": 4,
+        "wins": 3,
+        "losses": 1,
+        "winrate": "75.0%",
+        "average_kills": 3.25,
+        "average_deaths": 4.25,
+        "average_assists": 17.25,
+        "average_net_worth": 19871,
+        "average_imprint_rating": 43,
+        "facet_tally": [
+          {
+            "name": "Plague Carrier",
+            "icon_src": "https://cdn.imprint.gg/facets/summons.png",
+            "gradient": {
+              "left_colour": "#C8A45C",
+              "right_colour": "#6F3D21"
+            },
+            "match_count": 4,
+            "wins": 3,
+            "losses": 1,
+            "win_rate": "75.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 5,
+            "match_count": 2,
+            "wins": 2,
+            "losses": 0,
+            "win_rate": "100.0%"
+          },
+          {
+            "position": 1,
+            "match_count": 2,
+            "wins": 1,
+            "losses": 1,
+            "win_rate": "50.0%"
+          }
+        ]
+      },
+      {
+        "name": "Elder Titan",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_elder_titan.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_elder_titan.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_elder_titan.png",
+        "raw_name": "npc_dota_hero_elder_titan",
+        "match_count": 4,
+        "wins": 3,
+        "losses": 1,
+        "winrate": "75.0%",
+        "average_kills": 2.5,
+        "average_deaths": 4.5,
+        "average_assists": 21.25,
+        "average_net_worth": 10840.25,
+        "average_imprint_rating": 47.3,
+        "facet_tally": [
+          {
+            "name": "Deconstruction",
+            "icon_src": "https://cdn.imprint.gg/facets/armor_broken.png",
+            "gradient": {
+              "left_colour": "#6BAEBC",
+              "right_colour": "#135459"
+            },
+            "match_count": 3,
+            "wins": 2,
+            "losses": 1,
+            "win_rate": "66.7%"
+          },
+          {
+            "name": "Momentum",
+            "icon_src": "https://cdn.imprint.gg/facets/damage.png",
+            "gradient": {
+              "left_colour": "#C8A45C",
+              "right_colour": "#6F3D21"
+            },
+            "match_count": 1,
+            "wins": 1,
+            "losses": 0,
+            "win_rate": "100.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 5,
+            "match_count": 4,
+            "wins": 3,
+            "losses": 1,
+            "win_rate": "75.0%"
+          }
+        ]
+      },
+      {
+        "name": "Zeus",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_zuus.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_zuus.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_zuus.png",
+        "raw_name": "npc_dota_hero_zuus",
+        "match_count": 4,
+        "wins": 3,
+        "losses": 1,
+        "winrate": "75.0%",
+        "average_kills": 4.5,
+        "average_deaths": 3.25,
+        "average_assists": 16,
+        "average_net_worth": 11001.5,
+        "average_imprint_rating": 51.2,
+        "facet_tally": [
+          {
+            "name": "Livewire",
+            "icon_src": "https://cdn.imprint.gg/facets/range.png",
+            "gradient": {
+              "left_colour": "#547EA6",
+              "right_colour": "#2A385E"
+            },
+            "match_count": 4,
+            "wins": 3,
+            "losses": 1,
+            "win_rate": "75.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 5,
+            "match_count": 4,
+            "wins": 3,
+            "losses": 1,
+            "win_rate": "75.0%"
+          }
+        ]
+      },
+      {
+        "name": "Lifestealer",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_life_stealer.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_life_stealer.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_life_stealer.png",
+        "raw_name": "npc_dota_hero_life_stealer",
+        "match_count": 4,
+        "wins": 2,
+        "losses": 2,
+        "winrate": "50.0%",
+        "average_kills": 7.75,
+        "average_deaths": 3.75,
+        "average_assists": 14.25,
+        "average_net_worth": 25655,
+        "average_imprint_rating": 55,
+        "facet_tally": [
+          {
+            "name": "Rage",
+            "icon_src": "https://cdn.imprint.gg/facets/lifestealer_rage.png",
+            "gradient": {
+              "left_colour": "#C3A99A",
+              "right_colour": "#4D352B"
+            },
+            "match_count": 4,
+            "wins": 2,
+            "losses": 2,
+            "win_rate": "50.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 5,
+            "match_count": 1,
+            "wins": 1,
+            "losses": 0,
+            "win_rate": "100.0%"
+          },
+          {
+            "position": 1,
+            "match_count": 3,
+            "wins": 1,
+            "losses": 2,
+            "win_rate": "33.3%"
+          }
+        ]
+      },
+      {
+        "name": "Terrorblade",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_terrorblade.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_terrorblade.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_terrorblade.png",
+        "raw_name": "npc_dota_hero_terrorblade",
+        "match_count": 4,
+        "wins": 3,
+        "losses": 1,
+        "winrate": "75.0%",
+        "average_kills": 6.5,
+        "average_deaths": 2.5,
+        "average_assists": 8.75,
+        "average_net_worth": 21718.75,
+        "average_imprint_rating": 63.5,
+        "facet_tally": [
+          {
+            "name": "Condemned",
+            "icon_src": "https://cdn.imprint.gg/facets/twin_hearts.png",
+            "gradient": {
+              "left_colour": "#565C61",
+              "right_colour": "#1B1B21"
+            },
+            "match_count": 4,
+            "wins": 3,
+            "losses": 1,
+            "win_rate": "75.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 1,
+            "match_count": 4,
+            "wins": 3,
+            "losses": 1,
+            "win_rate": "75.0%"
+          }
+        ]
+      },
+      {
+        "name": "Ogre Magi",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_ogre_magi.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_ogre_magi.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_ogre_magi.png",
+        "raw_name": "npc_dota_hero_ogre_magi",
+        "match_count": 4,
+        "wins": 0,
+        "losses": 4,
+        "winrate": "0.0%",
+        "average_kills": 2,
+        "average_deaths": 8,
+        "average_assists": 5.75,
+        "average_net_worth": 6048.5,
+        "average_imprint_rating": 28.3,
+        "facet_tally": [
+          {
+            "name": "Learning Curve",
+            "icon_src": "https://cdn.imprint.gg/facets/ogre.png",
+            "gradient": {
+              "left_colour": "#547EA6",
+              "right_colour": "#2A385E"
+            },
+            "match_count": 4,
+            "wins": 0,
+            "losses": 4,
+            "win_rate": "0.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 5,
+            "match_count": 4,
+            "wins": 0,
+            "losses": 4,
+            "win_rate": "0.0%"
+          }
+        ]
+      },
+      {
+        "name": "Bloodseeker",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_bloodseeker.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_bloodseeker.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_bloodseeker.png",
+        "raw_name": "npc_dota_hero_bloodseeker",
+        "match_count": 4,
+        "wins": 1,
+        "losses": 3,
+        "winrate": "25.0%",
+        "average_kills": 5.5,
+        "average_deaths": 5.5,
+        "average_assists": 5.75,
+        "average_net_worth": 19669.25,
+        "average_imprint_rating": 36.8,
+        "facet_tally": [
+          {
+            "name": "Arterial Spray",
+            "icon_src": "https://cdn.imprint.gg/facets/movement.png",
+            "gradient": {
+              "left_colour": "#954533",
+              "right_colour": "#452732"
+            },
+            "match_count": 4,
+            "wins": 1,
+            "losses": 3,
+            "win_rate": "25.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 1,
+            "match_count": 4,
+            "wins": 1,
+            "losses": 3,
+            "win_rate": "25.0%"
+          }
+        ]
+      },
+      {
+        "name": "Lycan",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_lycan.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_lycan.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_lycan.png",
+        "raw_name": "npc_dota_hero_lycan",
+        "match_count": 5,
+        "wins": 3,
+        "losses": 2,
+        "winrate": "60.0%",
+        "average_kills": 5,
+        "average_deaths": 2.4,
+        "average_assists": 18,
+        "average_net_worth": 21866.2,
+        "average_imprint_rating": 55.7,
+        "facet_tally": [
+          {
+            "name": "Alpha Wolves",
+            "icon_src": "https://cdn.imprint.gg/facets/wolf.png",
+            "gradient": {
+              "left_colour": "#A2B23E",
+              "right_colour": "#2D5A18"
+            },
+            "match_count": 5,
+            "wins": 3,
+            "losses": 2,
+            "win_rate": "60.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 3,
+            "match_count": 3,
+            "wins": 2,
+            "losses": 1,
+            "win_rate": "66.7%"
+          },
+          {
+            "position": 1,
+            "match_count": 2,
+            "wins": 1,
+            "losses": 1,
+            "win_rate": "50.0%"
+          }
+        ]
+      },
+      {
+        "name": "Crystal Maiden",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_crystal_maiden.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_crystal_maiden.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_crystal_maiden.png",
+        "raw_name": "npc_dota_hero_crystal_maiden",
+        "match_count": 5,
+        "wins": 1,
+        "losses": 4,
+        "winrate": "20.0%",
+        "average_kills": 2.6,
+        "average_deaths": 7.8,
+        "average_assists": 12.4,
+        "average_net_worth": 9901.4,
+        "average_imprint_rating": 35.4,
+        "facet_tally": [
+          {
+            "name": "Frozen Expanse",
+            "icon_src": "https://cdn.imprint.gg/facets/area_of_effect.png",
+            "gradient": {
+              "left_colour": "#6A6D73",
+              "right_colour": "#29272C"
+            },
+            "match_count": 5,
+            "wins": 1,
+            "losses": 4,
+            "win_rate": "20.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 5,
+            "match_count": 5,
+            "wins": 1,
+            "losses": 4,
+            "win_rate": "20.0%"
+          }
+        ]
+      },
+      {
+        "name": "Spirit Breaker",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_spirit_breaker.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_spirit_breaker.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_spirit_breaker.png",
+        "raw_name": "npc_dota_hero_spirit_breaker",
+        "match_count": 5,
+        "wins": 3,
+        "losses": 2,
+        "winrate": "60.0%",
+        "average_kills": 2.8,
+        "average_deaths": 9.6,
+        "average_assists": 15.4,
+        "average_net_worth": 9886.8,
+        "average_imprint_rating": 27.1,
+        "facet_tally": [
+          {
+            "name": "Bull Rush",
+            "icon_src": "https://cdn.imprint.gg/facets/speed.png",
+            "gradient": {
+              "left_colour": "#954533",
+              "right_colour": "#452732"
+            },
+            "match_count": 5,
+            "wins": 3,
+            "losses": 2,
+            "win_rate": "60.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 4,
+            "match_count": 5,
+            "wins": 3,
+            "losses": 2,
+            "win_rate": "60.0%"
+          }
+        ]
+      },
+      {
+        "name": "Sniper",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_sniper.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_sniper.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_sniper.png",
+        "raw_name": "npc_dota_hero_sniper",
+        "match_count": 5,
+        "wins": 1,
+        "losses": 4,
+        "winrate": "20.0%",
+        "average_kills": 8.4,
+        "average_deaths": 3.8,
+        "average_assists": 13.4,
+        "average_net_worth": 26758.6,
+        "average_imprint_rating": 57.1,
+        "facet_tally": [
+          {
+            "name": "Ghillie Suit",
+            "icon_src": "https://cdn.imprint.gg/facets/vision.png",
+            "gradient": {
+              "left_colour": "#C8A45C",
+              "right_colour": "#6F3D21"
+            },
+            "match_count": 5,
+            "wins": 1,
+            "losses": 4,
+            "win_rate": "20.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 2,
+            "match_count": 5,
+            "wins": 1,
+            "losses": 4,
+            "win_rate": "20.0%"
+          }
+        ]
+      },
+      {
+        "name": "Muerta",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_muerta.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_muerta.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_muerta.png",
+        "raw_name": "npc_dota_hero_muerta",
+        "match_count": 5,
+        "wins": 1,
+        "losses": 4,
+        "winrate": "20.0%",
+        "average_kills": 1.2,
+        "average_deaths": 7.6,
+        "average_assists": 8,
+        "average_net_worth": 8904.6,
+        "average_imprint_rating": 25.6,
+        "facet_tally": [
+          {
+            "name": "Dance of the Dead",
+            "icon_src": "https://cdn.imprint.gg/facets/spirit.png",
+            "gradient": {
+              "left_colour": "#7EC2B2",
+              "right_colour": "#29493A"
+            },
+            "match_count": 5,
+            "wins": 1,
+            "losses": 4,
+            "win_rate": "20.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 4,
+            "match_count": 5,
+            "wins": 1,
+            "losses": 4,
+            "win_rate": "20.0%"
+          }
+        ]
+      },
+      {
+        "name": "Chen",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_chen.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_chen.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_chen.png",
+        "raw_name": "npc_dota_hero_chen",
+        "match_count": 5,
+        "wins": 5,
+        "losses": 0,
+        "winrate": "100.0%",
+        "average_kills": 1,
+        "average_deaths": 2.4,
+        "average_assists": 16,
+        "average_net_worth": 10780.4,
+        "average_imprint_rating": 47.8,
+        "facet_tally": [
+          {
+            "name": "Satyr Convert",
+            "icon_src": "https://cdn.imprint.gg/facets/mana.png",
+            "gradient": {
+              "left_colour": "#9C70A4",
+              "right_colour": "#282752"
+            },
+            "match_count": 5,
+            "wins": 5,
+            "losses": 0,
+            "win_rate": "100.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 5,
+            "match_count": 5,
+            "wins": 5,
+            "losses": 0,
+            "win_rate": "100.0%"
+          }
+        ]
+      },
+      {
+        "name": "Io",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_wisp.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_wisp.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_wisp.png",
+        "raw_name": "npc_dota_hero_wisp",
+        "match_count": 5,
+        "wins": 3,
+        "losses": 2,
+        "winrate": "60.0%",
+        "average_kills": 1.6,
+        "average_deaths": 5.8,
+        "average_assists": 14.6,
+        "average_net_worth": 9272.8,
+        "average_imprint_rating": 49.4,
+        "facet_tally": [
+          {
+            "name": "Kritzkrieg",
+            "icon_src": "https://cdn.imprint.gg/facets/damage.png",
+            "gradient": {
+              "left_colour": "#94B5BA",
+              "right_colour": "#385B59"
+            },
+            "match_count": 5,
+            "wins": 3,
+            "losses": 2,
+            "win_rate": "60.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 5,
+            "match_count": 4,
+            "wins": 3,
+            "losses": 1,
+            "win_rate": "75.0%"
+          },
+          {
+            "position": 4,
+            "match_count": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": "0.0%"
+          }
+        ]
+      },
+      {
+        "name": "Nyx Assassin",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_nyx_assassin.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_nyx_assassin.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_nyx_assassin.png",
+        "raw_name": "npc_dota_hero_nyx_assassin",
+        "match_count": 6,
+        "wins": 3,
+        "losses": 3,
+        "winrate": "50.0%",
+        "average_kills": 2.8333333333333335,
+        "average_deaths": 5.5,
+        "average_assists": 13.166666666666666,
+        "average_net_worth": 10803.333333333334,
+        "average_imprint_rating": 34.2,
+        "facet_tally": [
+          {
+            "name": "Scuttle",
+            "icon_src": "https://cdn.imprint.gg/facets/speed.png",
+            "gradient": {
+              "left_colour": "#A3735E",
+              "right_colour": "#4F2A25"
+            },
+            "match_count": 6,
+            "wins": 3,
+            "losses": 3,
+            "win_rate": "50.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 4,
+            "match_count": 6,
+            "wins": 3,
+            "losses": 3,
+            "win_rate": "50.0%"
+          }
+        ]
+      },
+      {
+        "name": "Warlock",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_warlock.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_warlock.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_warlock.png",
+        "raw_name": "npc_dota_hero_warlock",
+        "match_count": 6,
+        "wins": 2,
+        "losses": 4,
+        "winrate": "33.3%",
+        "average_kills": 1.6666666666666667,
+        "average_deaths": 5,
+        "average_assists": 12.5,
+        "average_net_worth": 7713,
+        "average_imprint_rating": 46.8,
+        "facet_tally": [
+          {
+            "name": "Black Grimoire",
+            "icon_src": "https://cdn.imprint.gg/facets/xp.png",
+            "gradient": {
+              "left_colour": "#ADB6BE",
+              "right_colour": "#4E5557"
+            },
+            "match_count": 6,
+            "wins": 2,
+            "losses": 4,
+            "win_rate": "33.3%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 5,
+            "match_count": 6,
+            "wins": 2,
+            "losses": 4,
+            "win_rate": "33.3%"
+          }
+        ]
+      },
+      {
+        "name": "Doom",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_doom_bringer.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_doom_bringer.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_doom_bringer.png",
+        "raw_name": "npc_dota_hero_doom_bringer",
+        "match_count": 6,
+        "wins": 2,
+        "losses": 4,
+        "winrate": "33.3%",
+        "average_kills": 4.666666666666667,
+        "average_deaths": 4.333333333333333,
+        "average_assists": 11,
+        "average_net_worth": 19041.666666666668,
+        "average_imprint_rating": 45,
+        "facet_tally": [
+          {
+            "name": "Devil's Bargain",
+            "icon_src": "https://cdn.imprint.gg/facets/gold.png",
+            "gradient": {
+              "left_colour": "#C8A45C",
+              "right_colour": "#6F3D21"
+            },
+            "match_count": 6,
+            "wins": 2,
+            "losses": 4,
+            "win_rate": "33.3%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 3,
+            "match_count": 6,
+            "wins": 2,
+            "losses": 4,
+            "win_rate": "33.3%"
+          }
+        ]
+      },
+      {
+        "name": "Enigma",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_enigma.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_enigma.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_enigma.png",
+        "raw_name": "npc_dota_hero_enigma",
+        "match_count": 6,
+        "wins": 3,
+        "losses": 3,
+        "winrate": "50.0%",
+        "average_kills": 2.3333333333333335,
+        "average_deaths": 4.5,
+        "average_assists": 12.333333333333334,
+        "average_net_worth": 14225,
+        "average_imprint_rating": 40.5,
+        "facet_tally": [
+          {
+            "name": "Splitting Image",
+            "icon_src": "https://cdn.imprint.gg/facets/summons.png",
+            "gradient": {
+              "left_colour": "#B57789",
+              "right_colour": "#412755"
+            },
+            "match_count": 5,
+            "wins": 3,
+            "losses": 2,
+            "win_rate": "60.0%"
+          },
+          {
+            "name": "Event Horizon",
+            "icon_src": "https://cdn.imprint.gg/facets/slow.png",
+            "gradient": {
+              "left_colour": "#ADB6BE",
+              "right_colour": "#4E5557"
+            },
+            "match_count": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": "0.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 3,
+            "match_count": 6,
+            "wins": 3,
+            "losses": 3,
+            "win_rate": "50.0%"
+          }
+        ]
+      },
+      {
+        "name": "Templar Assassin",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_templar_assassin.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_templar_assassin.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_templar_assassin.png",
+        "raw_name": "npc_dota_hero_templar_assassin",
+        "match_count": 7,
+        "wins": 2,
+        "losses": 5,
+        "winrate": "28.6%",
+        "average_kills": 6.142857142857143,
+        "average_deaths": 3.857142857142857,
+        "average_assists": 5.428571428571429,
+        "average_net_worth": 22644,
+        "average_imprint_rating": 56.2,
+        "facet_tally": [
+          {
+            "name": "Voidblades",
+            "icon_src": "https://cdn.imprint.gg/facets/ricochet.png",
+            "gradient": {
+              "left_colour": "#ADB6BE",
+              "right_colour": "#4E5557"
+            },
+            "match_count": 5,
+            "wins": 1,
+            "losses": 4,
+            "win_rate": "20.0%"
+          },
+          {
+            "name": "Refractor",
+            "icon_src": "https://cdn.imprint.gg/facets/damage.png",
+            "gradient": {
+              "left_colour": "#B57789",
+              "right_colour": "#412755"
+            },
+            "match_count": 2,
+            "wins": 1,
+            "losses": 1,
+            "win_rate": "50.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 1,
+            "match_count": 6,
+            "wins": 2,
+            "losses": 4,
+            "win_rate": "33.3%"
+          },
+          {
+            "position": 2,
+            "match_count": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": "0.0%"
+          }
+        ]
+      },
+      {
+        "name": "Razor",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_razor.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_razor.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_razor.png",
+        "raw_name": "npc_dota_hero_razor",
+        "match_count": 7,
+        "wins": 4,
+        "losses": 3,
+        "winrate": "57.1%",
+        "average_kills": 7.285714285714286,
+        "average_deaths": 4.571428571428571,
+        "average_assists": 12.142857142857142,
+        "average_net_worth": 22688.428571428572,
+        "average_imprint_rating": 53.1,
+        "facet_tally": [
+          {
+            "name": "Thunderhead",
+            "icon_src": "https://cdn.imprint.gg/facets/barrier.png",
+            "gradient": {
+              "left_colour": "#565C61",
+              "right_colour": "#1B1B21"
+            },
+            "match_count": 7,
+            "wins": 4,
+            "losses": 3,
+            "win_rate": "57.1%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 3,
+            "match_count": 2,
+            "wins": 1,
+            "losses": 1,
+            "win_rate": "50.0%"
+          },
+          {
+            "position": 1,
+            "match_count": 3,
+            "wins": 2,
+            "losses": 1,
+            "win_rate": "66.7%"
+          },
+          {
+            "position": 2,
+            "match_count": 2,
+            "wins": 1,
+            "losses": 1,
+            "win_rate": "50.0%"
+          }
+        ]
+      },
+      {
+        "name": "Pugna",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_pugna.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_pugna.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_pugna.png",
+        "raw_name": "npc_dota_hero_pugna",
+        "match_count": 7,
+        "wins": 4,
+        "losses": 3,
+        "winrate": "57.1%",
+        "average_kills": 3.142857142857143,
+        "average_deaths": 6.428571428571429,
+        "average_assists": 16.714285714285715,
+        "average_net_worth": 11795.714285714286,
+        "average_imprint_rating": 51.1,
+        "facet_tally": [
+          {
+            "name": "Siphoning Ward",
+            "icon_src": "https://cdn.imprint.gg/facets/healing.png",
+            "gradient": {
+              "left_colour": "#A2B23E",
+              "right_colour": "#2D5A18"
+            },
+            "match_count": 7,
+            "wins": 4,
+            "losses": 3,
+            "win_rate": "57.1%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 5,
+            "match_count": 6,
+            "wins": 4,
+            "losses": 2,
+            "win_rate": "66.7%"
+          },
+          {
+            "position": 4,
+            "match_count": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": "0.0%"
+          }
+        ]
+      },
+      {
+        "name": "Earthshaker",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_earthshaker.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_earthshaker.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_earthshaker.png",
+        "raw_name": "npc_dota_hero_earthshaker",
+        "match_count": 7,
+        "wins": 4,
+        "losses": 3,
+        "winrate": "57.1%",
+        "average_kills": 7.857142857142857,
+        "average_deaths": 2.5714285714285716,
+        "average_assists": 12.285714285714286,
+        "average_net_worth": 19604.571428571428,
+        "average_imprint_rating": 61.1,
+        "facet_tally": [
+          {
+            "name": "Slugger",
+            "icon_src": "https://cdn.imprint.gg/facets/movement.png",
+            "gradient": {
+              "left_colour": "#C6A158",
+              "right_colour": "#604928"
+            },
+            "match_count": 7,
+            "wins": 4,
+            "losses": 3,
+            "win_rate": "57.1%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 2,
+            "match_count": 6,
+            "wins": 4,
+            "losses": 2,
+            "win_rate": "66.7%"
+          },
+          {
+            "position": 1,
+            "match_count": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": "0.0%"
+          }
+        ]
+      },
+      {
+        "name": "Magnus",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_magnataur.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_magnataur.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_magnataur.png",
+        "raw_name": "npc_dota_hero_magnataur",
+        "match_count": 8,
+        "wins": 7,
+        "losses": 1,
+        "winrate": "87.5%",
+        "average_kills": 4.625,
+        "average_deaths": 3.125,
+        "average_assists": 18.75,
+        "average_net_worth": 20752,
+        "average_imprint_rating": 56.8,
+        "facet_tally": [
+          {
+            "name": "Reverse Polarity",
+            "icon_src": "https://cdn.imprint.gg/facets/vortex_in.png",
+            "gradient": {
+              "left_colour": "#ADB6BE",
+              "right_colour": "#4E5557"
+            },
+            "match_count": 8,
+            "wins": 7,
+            "losses": 1,
+            "win_rate": "87.5%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 3,
+            "match_count": 3,
+            "wins": 3,
+            "losses": 0,
+            "win_rate": "100.0%"
+          },
+          {
+            "position": 1,
+            "match_count": 1,
+            "wins": 1,
+            "losses": 0,
+            "win_rate": "100.0%"
+          },
+          {
+            "position": 2,
+            "match_count": 4,
+            "wins": 3,
+            "losses": 1,
+            "win_rate": "75.0%"
+          }
+        ]
+      },
+      {
+        "name": "Lina",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_lina.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_lina.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_lina.png",
+        "raw_name": "npc_dota_hero_lina",
+        "match_count": 8,
+        "wins": 5,
+        "losses": 3,
+        "winrate": "62.5%",
+        "average_kills": 9.375,
+        "average_deaths": 2.875,
+        "average_assists": 11.25,
+        "average_net_worth": 29166.625,
+        "average_imprint_rating": 55.3,
+        "facet_tally": [
+          {
+            "name": "Thermal Runaway",
+            "icon_src": "https://cdn.imprint.gg/facets/damage.png",
+            "gradient": {
+              "left_colour": "#C8A45C",
+              "right_colour": "#6F3D21"
+            },
+            "match_count": 8,
+            "wins": 5,
+            "losses": 3,
+            "win_rate": "62.5%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 2,
+            "match_count": 8,
+            "wins": 5,
+            "losses": 3,
+            "win_rate": "62.5%"
+          }
+        ]
+      },
+      {
+        "name": "Dawnbreaker",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_dawnbreaker.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_dawnbreaker.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_dawnbreaker.png",
+        "raw_name": "npc_dota_hero_dawnbreaker",
+        "match_count": 8,
+        "wins": 3,
+        "losses": 5,
+        "winrate": "37.5%",
+        "average_kills": 5,
+        "average_deaths": 5.875,
+        "average_assists": 13.5,
+        "average_net_worth": 21644.5,
+        "average_imprint_rating": 43.3,
+        "facet_tally": [
+          {
+            "name": "Solar Charged",
+            "icon_src": "https://cdn.imprint.gg/facets/cooldown.png",
+            "gradient": {
+              "left_colour": "#ADB6BE",
+              "right_colour": "#4E5557"
+            },
+            "match_count": 8,
+            "wins": 3,
+            "losses": 5,
+            "win_rate": "37.5%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 1,
+            "match_count": 2,
+            "wins": 1,
+            "losses": 1,
+            "win_rate": "50.0%"
+          },
+          {
+            "position": 3,
+            "match_count": 6,
+            "wins": 2,
+            "losses": 4,
+            "win_rate": "33.3%"
+          }
+        ]
+      },
+      {
+        "name": "Dragon Knight",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_dragon_knight.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_dragon_knight.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_dragon_knight.png",
+        "raw_name": "npc_dota_hero_dragon_knight",
+        "match_count": 9,
+        "wins": 4,
+        "losses": 5,
+        "winrate": "44.4%",
+        "average_kills": 6.111111111111111,
+        "average_deaths": 3.6666666666666665,
+        "average_assists": 8.88888888888889,
+        "average_net_worth": 24074.333333333332,
+        "average_imprint_rating": 53.4,
+        "facet_tally": [
+          {
+            "name": "Fire Dragon",
+            "icon_src": "https://cdn.imprint.gg/facets/dragon_fire.png",
+            "gradient": {
+              "left_colour": "#954533",
+              "right_colour": "#452732"
+            },
+            "match_count": 9,
+            "wins": 4,
+            "losses": 5,
+            "win_rate": "44.4%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 2,
+            "match_count": 5,
+            "wins": 2,
+            "losses": 3,
+            "win_rate": "40.0%"
+          },
+          {
+            "position": 1,
+            "match_count": 4,
+            "wins": 2,
+            "losses": 2,
+            "win_rate": "50.0%"
+          }
+        ]
+      },
+      {
+        "name": "Riki",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_riki.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_riki.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_riki.png",
+        "raw_name": "npc_dota_hero_riki",
+        "match_count": 9,
+        "wins": 5,
+        "losses": 4,
+        "winrate": "55.6%",
+        "average_kills": 2.7777777777777777,
+        "average_deaths": 6.888888888888889,
+        "average_assists": 17,
+        "average_net_worth": 10904.111111111111,
+        "average_imprint_rating": 41.7,
+        "facet_tally": [
+          {
+            "name": "Exterminator",
+            "icon_src": "https://cdn.imprint.gg/facets/agility.png",
+            "gradient": {
+              "left_colour": "#675CAE",
+              "right_colour": "#261C44"
+            },
+            "match_count": 9,
+            "wins": 5,
+            "losses": 4,
+            "win_rate": "55.6%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 4,
+            "match_count": 9,
+            "wins": 5,
+            "losses": 4,
+            "win_rate": "55.6%"
+          }
+        ]
+      },
+      {
+        "name": "Enchantress",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_enchantress.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_enchantress.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_enchantress.png",
+        "raw_name": "npc_dota_hero_enchantress",
+        "match_count": 9,
+        "wins": 1,
+        "losses": 8,
+        "winrate": "11.1%",
+        "average_kills": 4,
+        "average_deaths": 7,
+        "average_assists": 8.444444444444445,
+        "average_net_worth": 13749.888888888889,
+        "average_imprint_rating": 40.3,
+        "facet_tally": [
+          {
+            "name": "Spellbound",
+            "icon_src": "https://cdn.imprint.gg/facets/range.png",
+            "gradient": {
+              "left_colour": "#CAC194",
+              "right_colour": "#433828"
+            },
+            "match_count": 8,
+            "wins": 1,
+            "losses": 7,
+            "win_rate": "12.5%"
+          },
+          {
+            "name": "Overprotective Wisps",
+            "icon_src": "https://cdn.imprint.gg/facets/healing.png",
+            "gradient": {
+              "left_colour": "#A2B23E",
+              "right_colour": "#2D5A18"
+            },
+            "match_count": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": "0.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 5,
+            "match_count": 9,
+            "wins": 1,
+            "losses": 8,
+            "win_rate": "11.1%"
+          }
+        ]
+      },
+      {
+        "name": "Morphling",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_morphling.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_morphling.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_morphling.png",
+        "raw_name": "npc_dota_hero_morphling",
+        "match_count": 10,
+        "wins": 4,
+        "losses": 6,
+        "winrate": "40.0%",
+        "average_kills": 7.2,
+        "average_deaths": 3.8,
+        "average_assists": 6.6,
+        "average_net_worth": 20775.5,
+        "average_imprint_rating": 47.9,
+        "facet_tally": [
+          {
+            "name": "Ebb",
+            "icon_src": "https://cdn.imprint.gg/facets/agility.png",
+            "gradient": {
+              "left_colour": "#A2B23E",
+              "right_colour": "#2D5A18"
+            },
+            "match_count": 6,
+            "wins": 3,
+            "losses": 3,
+            "win_rate": "50.0%"
+          },
+          {
+            "name": "Flow",
+            "icon_src": "https://cdn.imprint.gg/facets/strength.png",
+            "gradient": {
+              "left_colour": "#9F3C3C",
+              "right_colour": "#4A2040"
+            },
+            "match_count": 4,
+            "wins": 1,
+            "losses": 3,
+            "win_rate": "25.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 1,
+            "match_count": 6,
+            "wins": 3,
+            "losses": 3,
+            "win_rate": "50.0%"
+          },
+          {
+            "position": 2,
+            "match_count": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": "0.0%"
+          },
+          {
+            "position": 4,
+            "match_count": 3,
+            "wins": 1,
+            "losses": 2,
+            "win_rate": "33.3%"
+          }
+        ]
+      },
+      {
+        "name": "Puck",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_puck.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_puck.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_puck.png",
+        "raw_name": "npc_dota_hero_puck",
+        "match_count": 10,
+        "wins": 3,
+        "losses": 7,
+        "winrate": "30.0%",
+        "average_kills": 5,
+        "average_deaths": 2.7,
+        "average_assists": 7.7,
+        "average_net_worth": 15435.5,
+        "average_imprint_rating": 51.1,
+        "facet_tally": [
+          {
+            "name": "Jostling Rift",
+            "icon_src": "https://cdn.imprint.gg/facets/movement.png",
+            "gradient": {
+              "left_colour": "#B57789",
+              "right_colour": "#412755"
+            },
+            "match_count": 8,
+            "wins": 2,
+            "losses": 6,
+            "win_rate": "25.0%"
+          },
+          {
+            "name": "Curveball",
+            "icon_src": "https://cdn.imprint.gg/facets/curve_ball.png",
+            "gradient": {
+              "left_colour": "#6BAEBC",
+              "right_colour": "#135459"
+            },
+            "match_count": 2,
+            "wins": 1,
+            "losses": 1,
+            "win_rate": "50.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 2,
+            "match_count": 10,
+            "wins": 3,
+            "losses": 7,
+            "win_rate": "30.0%"
+          }
+        ]
+      },
+      {
+        "name": "Abaddon",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_abaddon.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_abaddon.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_abaddon.png",
+        "raw_name": "npc_dota_hero_abaddon",
+        "match_count": 10,
+        "wins": 6,
+        "losses": 4,
+        "winrate": "60.0%",
+        "average_kills": 4.4,
+        "average_deaths": 3.6,
+        "average_assists": 9.6,
+        "average_net_worth": 18112.3,
+        "average_imprint_rating": 50.7,
+        "facet_tally": [
+          {
+            "name": "Mephitic Shroud",
+            "icon_src": "https://cdn.imprint.gg/facets/barrier.png",
+            "gradient": {
+              "left_colour": "#547EA6",
+              "right_colour": "#2A385E"
+            },
+            "match_count": 10,
+            "wins": 6,
+            "losses": 4,
+            "win_rate": "60.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 5,
+            "match_count": 2,
+            "wins": 1,
+            "losses": 1,
+            "win_rate": "50.0%"
+          },
+          {
+            "position": 1,
+            "match_count": 5,
+            "wins": 3,
+            "losses": 2,
+            "win_rate": "60.0%"
+          },
+          {
+            "position": 3,
+            "match_count": 3,
+            "wins": 2,
+            "losses": 1,
+            "win_rate": "66.7%"
+          }
+        ]
+      },
+      {
+        "name": "Lich",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_lich.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_lich.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_lich.png",
+        "raw_name": "npc_dota_hero_lich",
+        "match_count": 11,
+        "wins": 4,
+        "losses": 7,
+        "winrate": "36.4%",
+        "average_kills": 2,
+        "average_deaths": 8.272727272727273,
+        "average_assists": 14.636363636363637,
+        "average_net_worth": 8730.727272727272,
+        "average_imprint_rating": 39.7,
+        "facet_tally": [
+          {
+            "name": "Frostbound",
+            "icon_src": "https://cdn.imprint.gg/facets/snowflake.png",
+            "gradient": {
+              "left_colour": "#727CB2",
+              "right_colour": "#342D5B"
+            },
+            "match_count": 9,
+            "wins": 3,
+            "losses": 6,
+            "win_rate": "33.3%"
+          },
+          {
+            "name": "Growing Cold",
+            "icon_src": "https://cdn.imprint.gg/facets/cooldown.png",
+            "gradient": {
+              "left_colour": "#565C61",
+              "right_colour": "#1B1B21"
+            },
+            "match_count": 2,
+            "wins": 1,
+            "losses": 1,
+            "win_rate": "50.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 5,
+            "match_count": 11,
+            "wins": 4,
+            "losses": 7,
+            "win_rate": "36.4%"
+          }
+        ]
+      },
+      {
+        "name": "Gyrocopter",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_gyrocopter.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_gyrocopter.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_gyrocopter.png",
+        "raw_name": "npc_dota_hero_gyrocopter",
+        "match_count": 11,
+        "wins": 7,
+        "losses": 4,
+        "winrate": "63.6%",
+        "average_kills": 4.818181818181818,
+        "average_deaths": 3.5454545454545454,
+        "average_assists": 10.727272727272727,
+        "average_net_worth": 24053.81818181818,
+        "average_imprint_rating": 51.6,
+        "facet_tally": [
+          {
+            "name": "Afterburner",
+            "icon_src": "https://cdn.imprint.gg/facets/speed.png",
+            "gradient": {
+              "left_colour": "#C6A158",
+              "right_colour": "#604928"
+            },
+            "match_count": 9,
+            "wins": 5,
+            "losses": 4,
+            "win_rate": "55.6%"
+          },
+          {
+            "name": "Secondary Strikes",
+            "icon_src": "https://cdn.imprint.gg/facets/nuke.png",
+            "gradient": {
+              "left_colour": "#9F3C3C",
+              "right_colour": "#4A2040"
+            },
+            "match_count": 2,
+            "wins": 2,
+            "losses": 0,
+            "win_rate": "100.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 1,
+            "match_count": 10,
+            "wins": 7,
+            "losses": 3,
+            "win_rate": "70.0%"
+          },
+          {
+            "position": 4,
+            "match_count": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": "0.0%"
+          }
+        ]
+      },
+      {
+        "name": "Pangolier",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_pangolier.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_pangolier.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_pangolier.png",
+        "raw_name": "npc_dota_hero_pangolier",
+        "match_count": 12,
+        "wins": 9,
+        "losses": 3,
+        "winrate": "75.0%",
+        "average_kills": 5.583333333333333,
+        "average_deaths": 3.1666666666666665,
+        "average_assists": 11.833333333333334,
+        "average_net_worth": 18286,
+        "average_imprint_rating": 59.5,
+        "facet_tally": [
+          {
+            "name": "Double Jump",
+            "icon_src": "https://cdn.imprint.gg/facets/double_bounce.png",
+            "gradient": {
+              "left_colour": "#954533",
+              "right_colour": "#452732"
+            },
+            "match_count": 5,
+            "wins": 4,
+            "losses": 1,
+            "win_rate": "80.0%"
+          },
+          {
+            "name": "Thunderbolt",
+            "icon_src": "https://cdn.imprint.gg/facets/speed.png",
+            "gradient": {
+              "left_colour": "#C6A158",
+              "right_colour": "#604928"
+            },
+            "match_count": 7,
+            "wins": 5,
+            "losses": 2,
+            "win_rate": "71.4%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 3,
+            "match_count": 6,
+            "wins": 4,
+            "losses": 2,
+            "win_rate": "66.7%"
+          },
+          {
+            "position": 2,
+            "match_count": 6,
+            "wins": 5,
+            "losses": 1,
+            "win_rate": "83.3%"
+          }
+        ]
+      },
+      {
+        "name": "Monkey King",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_monkey_king.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_monkey_king.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_monkey_king.png",
+        "raw_name": "npc_dota_hero_monkey_king",
+        "match_count": 12,
+        "wins": 3,
+        "losses": 9,
+        "winrate": "25.0%",
+        "average_kills": 4.5,
+        "average_deaths": 6,
+        "average_assists": 9.666666666666666,
+        "average_net_worth": 17830.666666666668,
+        "average_imprint_rating": 40,
+        "facet_tally": [
+          {
+            "name": "Simian Stride",
+            "icon_src": "https://cdn.imprint.gg/facets/tree.png",
+            "gradient": {
+              "left_colour": "#9FAD8E",
+              "right_colour": "#3F4129"
+            },
+            "match_count": 12,
+            "wins": 3,
+            "losses": 9,
+            "win_rate": "25.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 2,
+            "match_count": 8,
+            "wins": 3,
+            "losses": 5,
+            "win_rate": "37.5%"
+          },
+          {
+            "position": 1,
+            "match_count": 3,
+            "wins": 0,
+            "losses": 3,
+            "win_rate": "0.0%"
+          },
+          {
+            "position": 4,
+            "match_count": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": "0.0%"
+          }
+        ]
+      },
+      {
+        "name": "Bounty Hunter",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_bounty_hunter.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_bounty_hunter.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_bounty_hunter.png",
+        "raw_name": "npc_dota_hero_bounty_hunter",
+        "match_count": 13,
+        "wins": 7,
+        "losses": 6,
+        "winrate": "53.8%",
+        "average_kills": 3.4615384615384617,
+        "average_deaths": 6.769230769230769,
+        "average_assists": 17.384615384615383,
+        "average_net_worth": 12168.923076923076,
+        "average_imprint_rating": 50.6,
+        "facet_tally": [
+          {
+            "name": "Through and Through",
+            "icon_src": "https://cdn.imprint.gg/facets/nuke.png",
+            "gradient": {
+              "left_colour": "#9F3C3C",
+              "right_colour": "#4A2040"
+            },
+            "match_count": 13,
+            "wins": 7,
+            "losses": 6,
+            "win_rate": "53.8%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 4,
+            "match_count": 12,
+            "wins": 7,
+            "losses": 5,
+            "win_rate": "58.3%"
+          },
+          {
+            "position": 5,
+            "match_count": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": "0.0%"
+          }
+        ]
+      },
+      {
+        "name": "Phantom Assassin",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_phantom_assassin.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_phantom_assassin.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_phantom_assassin.png",
+        "raw_name": "npc_dota_hero_phantom_assassin",
+        "match_count": 13,
+        "wins": 8,
+        "losses": 5,
+        "winrate": "61.5%",
+        "average_kills": 9.76923076923077,
+        "average_deaths": 3.769230769230769,
+        "average_assists": 7.923076923076923,
+        "average_net_worth": 25444.846153846152,
+        "average_imprint_rating": 52.6,
+        "facet_tally": [
+          {
+            "name": "Methodical",
+            "icon_src": "https://cdn.imprint.gg/facets/skull.png",
+            "gradient": {
+              "left_colour": "#565C61",
+              "right_colour": "#1B1B21"
+            },
+            "match_count": 13,
+            "wins": 8,
+            "losses": 5,
+            "win_rate": "61.5%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 1,
+            "match_count": 13,
+            "wins": 8,
+            "losses": 5,
+            "win_rate": "61.5%"
+          }
+        ]
+      },
+      {
+        "name": "Phoenix",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_phoenix.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_phoenix.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_phoenix.png",
+        "raw_name": "npc_dota_hero_phoenix",
+        "match_count": 14,
+        "wins": 7,
+        "losses": 7,
+        "winrate": "50.0%",
+        "average_kills": 4.357142857142857,
+        "average_deaths": 5.285714285714286,
+        "average_assists": 12.5,
+        "average_net_worth": 12836.57142857143,
+        "average_imprint_rating": 43.6,
+        "facet_tally": [
+          {
+            "name": "Dying Light",
+            "icon_src": "https://cdn.imprint.gg/facets/barrier.png",
+            "gradient": {
+              "left_colour": "#A3735E",
+              "right_colour": "#4F2A25"
+            },
+            "match_count": 14,
+            "wins": 7,
+            "losses": 7,
+            "win_rate": "50.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 5,
+            "match_count": 11,
+            "wins": 7,
+            "losses": 4,
+            "win_rate": "63.6%"
+          },
+          {
+            "position": 3,
+            "match_count": 3,
+            "wins": 0,
+            "losses": 3,
+            "win_rate": "0.0%"
+          }
+        ]
+      },
+      {
+        "name": "Beastmaster",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_beastmaster.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_beastmaster.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_beastmaster.png",
+        "raw_name": "npc_dota_hero_beastmaster",
+        "match_count": 15,
+        "wins": 7,
+        "losses": 8,
+        "winrate": "46.7%",
+        "average_kills": 5.266666666666667,
+        "average_deaths": 4.866666666666666,
+        "average_assists": 10.866666666666667,
+        "average_net_worth": 20003.533333333333,
+        "average_imprint_rating": 47.7,
+        "facet_tally": [
+          {
+            "name": "Beast Mode",
+            "icon_src": "https://cdn.imprint.gg/facets/damage.png",
+            "gradient": {
+              "left_colour": "#C6A158",
+              "right_colour": "#604928"
+            },
+            "match_count": 13,
+            "wins": 7,
+            "losses": 6,
+            "win_rate": "53.8%"
+          },
+          {
+            "name": "Wild Hunt",
+            "icon_src": "https://cdn.imprint.gg/facets/summons.png",
+            "gradient": {
+              "left_colour": "#954533",
+              "right_colour": "#452732"
+            },
+            "match_count": 2,
+            "wins": 0,
+            "losses": 2,
+            "win_rate": "0.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 3,
+            "match_count": 13,
+            "wins": 5,
+            "losses": 8,
+            "win_rate": "38.5%"
+          },
+          {
+            "position": 1,
+            "match_count": 2,
+            "wins": 2,
+            "losses": 0,
+            "win_rate": "100.0%"
+          }
+        ]
+      },
+      {
+        "name": "Tiny",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_tiny.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_tiny.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_tiny.png",
+        "raw_name": "npc_dota_hero_tiny",
+        "match_count": 15,
+        "wins": 6,
+        "losses": 9,
+        "winrate": "40.0%",
+        "average_kills": 7,
+        "average_deaths": 3.2666666666666666,
+        "average_assists": 11.866666666666667,
+        "average_net_worth": 18759.866666666665,
+        "average_imprint_rating": 54.2,
+        "facet_tally": [
+          {
+            "name": "Crash Landing",
+            "icon_src": "https://cdn.imprint.gg/facets/nuke.png",
+            "gradient": {
+              "left_colour": "#95A9B1",
+              "right_colour": "#3E464F"
+            },
+            "match_count": 15,
+            "wins": 6,
+            "losses": 9,
+            "win_rate": "40.0%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 2,
+            "match_count": 11,
+            "wins": 5,
+            "losses": 6,
+            "win_rate": "45.5%"
+          },
+          {
+            "position": 1,
+            "match_count": 2,
+            "wins": 0,
+            "losses": 2,
+            "win_rate": "0.0%"
+          },
+          {
+            "position": 3,
+            "match_count": 1,
+            "wins": 1,
+            "losses": 0,
+            "win_rate": "100.0%"
+          },
+          {
+            "position": 4,
+            "match_count": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": "0.0%"
+          }
+        ]
+      },
+      {
+        "name": "Batrider",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_batrider.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_batrider.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_batrider.png",
+        "raw_name": "npc_dota_hero_batrider",
+        "match_count": 17,
+        "wins": 8,
+        "losses": 9,
+        "winrate": "47.1%",
+        "average_kills": 3.6470588235294117,
+        "average_deaths": 7,
+        "average_assists": 13.705882352941176,
+        "average_net_worth": 10466.176470588236,
+        "average_imprint_rating": 45.9,
+        "facet_tally": [
+          {
+            "name": "Stoked",
+            "icon_src": "https://cdn.imprint.gg/facets/speed.png",
+            "gradient": {
+              "left_colour": "#C6A158",
+              "right_colour": "#604928"
+            },
+            "match_count": 17,
+            "wins": 8,
+            "losses": 9,
+            "win_rate": "47.1%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 4,
+            "match_count": 14,
+            "wins": 7,
+            "losses": 7,
+            "win_rate": "50.0%"
+          },
+          {
+            "position": 5,
+            "match_count": 3,
+            "wins": 1,
+            "losses": 2,
+            "win_rate": "33.3%"
+          }
+        ]
+      },
+      {
+        "name": "Clockwerk",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_rattletrap.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_rattletrap.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_rattletrap.png",
+        "raw_name": "npc_dota_hero_rattletrap",
+        "match_count": 19,
+        "wins": 11,
+        "losses": 8,
+        "winrate": "57.9%",
+        "average_kills": 2.8421052631578947,
+        "average_deaths": 6,
+        "average_assists": 16.42105263157895,
+        "average_net_worth": 10153.947368421053,
+        "average_imprint_rating": 51,
+        "facet_tally": [
+          {
+            "name": "Expanded Armature",
+            "icon_src": "https://cdn.imprint.gg/facets/area_of_effect.png",
+            "gradient": {
+              "left_colour": "#A3735E",
+              "right_colour": "#4F2A25"
+            },
+            "match_count": 19,
+            "wins": 11,
+            "losses": 8,
+            "win_rate": "57.9%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 4,
+            "match_count": 15,
+            "wins": 8,
+            "losses": 7,
+            "win_rate": "53.3%"
+          },
+          {
+            "position": 5,
+            "match_count": 4,
+            "wins": 3,
+            "losses": 1,
+            "win_rate": "75.0%"
+          }
+        ]
+      },
+      {
+        "name": "Bristleback",
+        "live_portrait_src": "https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_bristleback.webm",
+        "icon_src": "https://cdn.imprint.gg/heroes/minimap_icons/npc_dota_hero_bristleback.png",
+        "static_portrait_src": "https://cdn.imprint.gg/heroes/rectangular_portraits/npc_dota_hero_bristleback.png",
+        "raw_name": "npc_dota_hero_bristleback",
+        "match_count": 20,
+        "wins": 12,
+        "losses": 8,
+        "winrate": "60.0%",
+        "average_kills": 5.25,
+        "average_deaths": 4.7,
+        "average_assists": 11.45,
+        "average_net_worth": 20525.95,
+        "average_imprint_rating": 53.7,
+        "facet_tally": [
+          {
+            "name": "Snot Rocket",
+            "icon_src": "https://cdn.imprint.gg/facets/snot.png",
+            "gradient": {
+              "left_colour": "#A2B23E",
+              "right_colour": "#2D5A18"
+            },
+            "match_count": 13,
+            "wins": 9,
+            "losses": 4,
+            "win_rate": "69.2%"
+          },
+          {
+            "name": "Seeing Red",
+            "icon_src": "https://cdn.imprint.gg/facets/no_vision.png",
+            "gradient": {
+              "left_colour": "#9F3C3C",
+              "right_colour": "#4A2040"
+            },
+            "match_count": 7,
+            "wins": 3,
+            "losses": 4,
+            "win_rate": "42.9%"
+          }
+        ],
+        "position_tally": [
+          {
+            "position": 3,
+            "match_count": 18,
+            "wins": 11,
+            "losses": 7,
+            "win_rate": "61.1%"
+          },
+          {
+            "position": 1,
+            "match_count": 2,
+            "wins": 1,
+            "losses": 1,
+            "win_rate": "50.0%"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -45,7 +45,7 @@ const teams = {
   },
   croakercamp: {
     name: 'Croaker Camp',
-    logo: 'teamlogos/wongs_bakery.png',
+    logo: 'teamlogos/croaker_camp.png',
     players: [
       { id: 1, name: 'Onix' },
       { id: 2, name: 'Poddy' },

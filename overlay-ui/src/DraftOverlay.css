@@ -1,100 +1,107 @@
-/* glow effect over reserve time */
+/* Glow effect for reserve time */
 .glow-effect {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-    font-weight: bold;
-    transition: text-shadow 0.3s ease-in-out;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  font-weight: bold;
+  transition: text-shadow 0.3s ease-in-out;
 }
 
+/* Hero gold display */
 .hero-gold {
-    color: #ffd700; /* Gold color */
-    font-size: 12px;
-    font-weight: bold;
+  color: #ffd700; /* Gold color */
+  font-size: 12px;
+  font-weight: bold;
 }
 
+/* Hero level display */
 .hero-level {
-    color: #00ff00; /* Green color */
-    font-size: 12px;
-    font-weight: bold;
+  color: #00ff00; /* Green color */
+  font-size: 12px;
+  font-weight: bold;
 }
 
+/* Gold icon for hero gold display */
 .gold-icon {
-  width: 16px; /* Adjust the width as needed */
-  height: 16px; /* Adjust the height as needed */
-  vertical-align: middle; /* Align the icon with the text */
+width: 16px; /* Adjust the width as needed */
+height: 16px; /* Adjust the height as needed */
+vertical-align: middle; /* Align the icon with the text */
 }
 
-@keyframes arrow-fade-out {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes arrow-fade-in-radiant {
-  0% {
-    opacity: 0;
-    transform: rotate(180deg);
-  }
-  100% {
-    opacity: 1;
-    transform: rotate(0deg);
-  }
-}
-
-@keyframes arrow-fade-in-dire {
-  0% {
-    opacity: 0;
-    transform: rotate(0deg);
-  }
-  100% {
-    opacity: 1;
-    transform: rotate(180deg);
-  }
-}
-
-.arrow-fade-out {
-  animation: arrow-fade-out 0.5s ease-in-out forwards;
-}
-
-.arrow-fade-in-radiant {
-  animation: arrow-fade-in-radiant 0.5s ease-in-out forwards;
-}
-
-.arrow-fade-in-dire {
-  animation: arrow-fade-in-dire 0.5s ease-in-out forwards;
-}
-
-@keyframes reserveTimeBlink {
-  0% { opacity: 1; }
-  50% { opacity: 0.5; }
-  100% { opacity: 1; }
-}
-
-.reserve-time-active {
-  animation: reserveTimeBlink 1s infinite;
-}
-
+/* Team logo styles */
 .team-logo {
-  transition: filter 0.3s ease;
+transition: filter 0.3s ease;
 }
 
 .team-logo.active-team {
-  filter: drop-shadow(0 0 10px green);
+filter: drop-shadow(0 0 10px green);
 }
 
 .team-logo.active-team.red {
-  filter: drop-shadow(0 0 10px red);
+filter: drop-shadow(0 0 10px red);
 }
 
+/* Next slot indicator */
 .next-slot {
-  border: 2px dashed #ffd700; /* Gold dashed border */
-  animation: next-slot-blink 1s infinite;
+border: 2px dashed #ffd700; /* Gold dashed border */
+animation: next-slot-blink 1s infinite;
 }
 
 @keyframes next-slot-blink {
-  0% { opacity: 1; }
-  50% { opacity: 0.5; }
-  100% { opacity: 1; }
+0% { opacity: 1; }
+50% { opacity: 0.5; }
+100% { opacity: 1; }
+}
+
+/* Arrow animations */
+@keyframes arrow-fade-out {
+0% {
+  opacity: 1;
+}
+100% {
+  opacity: 0;
+}
+}
+
+@keyframes arrow-fade-in-radiant {
+0% {
+  opacity: 0;
+  transform: rotate(180deg);
+}
+100% {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+}
+
+@keyframes arrow-fade-in-dire {
+0% {
+  opacity: 0;
+  transform: rotate(0deg);
+}
+100% {
+  opacity: 1;
+  transform: rotate(180deg);
+}
+}
+
+.arrow-fade-out {
+animation: arrow-fade-out 0.5s ease-in-out forwards;
+}
+
+.arrow-fade-in-radiant {
+animation: arrow-fade-in-radiant 0.5s ease-in-out forwards;
+}
+
+.arrow-fade-in-dire {
+animation: arrow-fade-in-dire 0.5s ease-in-out forwards;
+}
+
+/* Reserve time blinking animation */
+@keyframes reserveTimeBlink {
+0% { opacity: 1; }
+50% { opacity: 0.5; }
+100% { opacity: 1; }
+}
+
+.reserve-time-active {
+animation: reserveTimeBlink 1s infinite;
 }

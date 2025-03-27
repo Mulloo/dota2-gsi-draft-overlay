@@ -1,6 +1,7 @@
 {
   "name": "overlay-ui",
   "version": "1.0.0",
+  "main": "index.js",
   "private": true,
   "dependencies": {
     "@headlessui/react": "^2.2.0",
@@ -11,7 +12,9 @@
     "@testing-library/user-event": "^13.5.0",
     "assert": "^2.1.0",
     "axios": "^1.8.3",
+    "file-saver": "^2.0.5",
     "framer-motion": "^12.5.0",
+    "fs": "^0.0.1-security",
     "http-proxy-middleware": "^3.0.3",
     "https-browserify": "^1.0.0",
     "overlay-ui": "file:",
@@ -50,7 +53,8 @@
   "devDependencies": {
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.3",
-    "tailwindcss": "^3.4.17"
+    "tailwindcss": "^3.4.17",
+    "webpack-cli": "^6.0.1"
   },
   "proxy": "https://test.api.imprint.gg"
 }

@@ -4,8 +4,8 @@ import './DraftOverlay.css';
 import teams from './teamInfo'; // Import team information
 import heroNameMapping from './heroNameMapping'; // Import hero name mapping
 import heroPortraitPositions from './heroPortraitPositions'; // Import hero portrait positions
-import { calculateHeroLevel, formatTime } from './utilityFunctions'; // Import utility functions
-import { fetchLeagueHeroStatistics } from './api'; // Import the API function
+import { calculateHeroLevel, formatTime, pickBanSequence } from './utilityFunctions'; // Import utility functions
+
 
 const arrowStyle = {
   position: 'absolute',
@@ -20,22 +20,70 @@ const formatHeroName = (hero) => {
   return heroNameMapping[formattedName.toLowerCase()] || formattedName;
 };
 
-// Determine the next slot to be filled for picks or bans
-const getNextSlotIndex = (team, type) => {
-  const prefix = type === 'pick' ? 'pick' : 'ban';
-  for (let i = 0; i < 7; i++) {
-    if (!team[`${prefix}${i}_class`]) {
-      return i;
+// Determine the next slot to be filled based on the pick and ban sequence
+const getNextSlotIndex = (radiant, dire, sequence) => {
+  for (let i = 0; i < sequence.length; i++) {
+    const { team, type, index } = sequence[i];
+    if (team === 'Radiant' && !radiant[`${type}${index}_class`]) {
+      return { team, type, index };
+    }
+    if (team === 'Dire' && !dire[`${type}${index}_class`]) {
+      return { team, type, index };
     }
   }
-  return -1;
+  return null;
 };
 
-const DraftOverlay = ({ leagueId }) => {
+// Check if the draft is complete
+const isDraftComplete = (radiant, dire) => {
+  const totalPicks = 5;
+  const radiantPicks = Object.keys(radiant).filter(key => key.startsWith('pick') && radiant[key]).length;
+  const direPicks = Object.keys(dire).filter(key => key.startsWith('pick') && dire[key]).length;
+  return radiantPicks === totalPicks && direPicks === totalPicks;
+};
+
+// Gather hero names from the draft
+const gatherHeroNames = (radiant, dire) => {
+  const radiantHeroes = Object.keys(radiant)
+    .filter(key => key.startsWith('pick') && radiant[key])
+    .map(key => radiant[key].replace('npc_dota_hero_', ''));
+  const direHeroes = Object.keys(dire)
+    .filter(key => key.startsWith('pick') && dire[key])
+    .map(key => dire[key].replace('npc_dota_hero_', ''));
+  return { radiantHeroes, direHeroes };
+};
+
+// Get the list of picked heroes for a team
+const getTeamPicks = (team) => {
+  return Object.entries(team)
+    .filter(([key, value]) => key.match(/^pick\d+_class$/) && value)
+    .map(([_, value]) => value.replace('npc_dota_hero_', ''));
+};
+
+// Get the list of banned heroes for a team
+const getTeamBans = (team) => {
+  return Object.entries(team)
+    .filter(([key, value]) => key.match(/^ban\d+_class$/) && value)
+    .map(([_, value]) => value.replace("npc_dota_hero_", ""));
+};
+
+
+const DraftOverlay = () => {
+  const [heroStats, setHeroStats] = useState({});
   const [gameState, setGameState] = useState({});
   const [isInGame, setIsInGame] = useState(false);
   const [hidePlayerInfo, setHidePlayerInfo] = useState(false);
-  const [heroStatistics, setHeroStatistics] = useState([]);
+  const [draftComplete, setDraftComplete] = useState(false);
+
+  useEffect(() => {
+    const fixedLeagueId = 17417; // 🔧 your static league ID
+  
+    axios.post('http://localhost:4000/league/heroes', { league_id: fixedLeagueId })
+      .then((res) => {
+        setHeroStats(res.data);
+      })
+      .catch((err) => console.error('Failed to fetch league hero data:', err));
+  }, []);
 
   useEffect(() => {
     // Fetch game state every 500ms
@@ -60,110 +108,98 @@ const DraftOverlay = ({ leagueId }) => {
   }, []);
 
   const draft = gameState.draft || {};
-  const radiant = draft.team2 || {};
-  const dire = draft.team3 || {};
+  const radiant = React.useMemo(() => draft.team2 || {}, [draft.team2]);
+  const dire = React.useMemo(() => draft.team3 || {}, [draft.team3]);
   const activeTeam = draft.activeteam === 2 ? 'Radiant' : 'Dire';
   const activePickOrBan = draft.pick ? "Pick" : "Ban";
 
-  useEffect(() => {
-    const getHeroStatistics = async () => {
-      console.log('Calling fetchLeagueHeroStatistics'); // Log before calling the function
-      const data = await fetchLeagueHeroStatistics(leagueId); // Use the actual league ID
-      console.log('API Response:', data); // Log the API response
-      setHeroStatistics(data);
-    };
+  const nextSlot = getNextSlotIndex(radiant, dire, pickBanSequence);
 
-    if (gameState.map && gameState.map.game_state === 'DOTA_GAMERULES_STATE_HERO_SELECTION') {
-      console.log('Current Game State:', gameState); // Log the current game state
-      getHeroStatistics();
+  // Check if the draft is complete and gather hero names
+  useEffect(() => {
+    if (isDraftComplete(radiant, dire)) {
+      const { radiantHeroes, direHeroes } = gatherHeroNames(radiant, dire);
+      console.log('Radiant Heroes:', radiantHeroes);
+      console.log('Dire Heroes:', direHeroes);
+      setDraftComplete(true);
     }
-  }, [gameState, leagueId]);
-
-  useEffect(() => {
-    const getHeroStatistics = async () => {
-      console.log('Calling fetchLeagueHeroStatistics'); // Log before calling the function
-      const data = await fetchLeagueHeroStatistics(leagueId); // Use the actual league ID
-      console.log('API Response:', data); // Log the API response
-      setHeroStatistics(data);
-    };
-
-    getHeroStatistics();
-  }, [leagueId]);
-
-  useEffect(() => {
-    heroStatistics.forEach(hero => {
-      console.log('Hero Name:', hero.name);
-    });
-  }, [heroStatistics]);
-
-  const renderHeroWinRate = (heroName) => {
-    console.log('Hero Name:', heroName); // Log the hero name
-    const formattedHeroName = heroNameMapping[heroName.toLowerCase()] || heroName;
-    const hero = heroStatistics.find(h => h.name.toLowerCase() === formattedHeroName.toLowerCase());
-    return hero ? `${hero.winrate}%` : 'N/A';
-  };
-
-  // Get the list of picked heroes for a team
-  const getTeamPicks = (team) => {
-    return Object.entries(team)
-      .filter(([key, value]) => key.match(/^pick\d+_class$/) && value)
-      .map(([_, value]) => value.replace("npc_dota_hero_", ""));
-  };
-
-  // Get the list of banned heroes for a team
-  const getTeamBans = (team) => {
-    return Object.entries(team)
-      .filter(([key, value]) => key.match(/^ban\d+_class$/) && value)
-      .map(([_, value]) => value.replace("npc_dota_hero_", ""));
-  };
+  }, [radiant, dire]);
 
   // Render picked heroes
-  const renderPickedHeroes = (heroes, size = '100px', totalSlots = 5, nextSlotIndex) => {
+  const renderPickedHeroes = (heroes, size = '100px', totalSlots = 5, nextSlot, team) => {
     return (
       <div className="flex flex-wrap gap-2">
-        {heroes.map((hero, idx) => (
-          <div key={idx} className="relative" style={{ width: size, height: size, margin: '4px' }}>
-            {hero ? (
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                src={`https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_${hero}.webm`}
-                className="object-contain rounded-md"
-                style={{ width: '100%', height: '100%' }}
-              />
-            ) : null}
-            <div className="absolute bottom-0 left-0 right-0 text-xs text-center text-white bg-black bg-opacity-50">
-              {formatHeroName(hero)}
+        {heroes.map((hero, idx) => {
+          const heroData = heroStats.hero_statistics?.heroes.find(
+            (h) => h.raw_name === `npc_dota_hero_${hero}`
+          );
+          const winRate = heroData?.winrate ? `${heroData.winrate}%` : 'N/A';
+
+          return (
+            <div key={idx} className="relative" style={{ width: size, height: size, margin: '4px' }}>
+              {hero ? (
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  src={`https://cdn.imprint.gg/heroes/live_portraits/npc_dota_hero_${hero}.webm`}
+                  className="object-contain rounded-md"
+                  style={{ width: '100%', height: '100%' }}
+                />
+              ) : null}
+              <div className="absolute bottom-0 left-0 right-0 text-xs text-center text-white bg-black bg-opacity-50">
+                {formatHeroName(hero)}
+              </div>
+              {hero && (
+                <div className="absolute left-0 right-0 mt-1 text-xs text-center text-yellow-400 top-full">
+                  Win Rate: {winRate}
+                </div>
+              )}
             </div>
-          </div>
-        ))}
-        {Array.from({ length: totalSlots - heroes.length }).map((_, idx) => (
-          <div
-            key={`empty-${idx}`}
-            className={idx === nextSlotIndex ? 'next-slot' : ''}
-            style={{ width: size, height: size, backgroundColor: '#1f2937', borderRadius: '8px', margin: '4px' }}
-          >
-            {idx === nextSlotIndex && (
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                src="/loading.webm"
-                className="object-contain rounded-md"
-                style={{ width: '100%', height: '100%' }}
-              />
-            )}
-          </div>
-        ))}
+          );
+        })}
+        {Array.from({ length: totalSlots - heroes.length }).map((_, idx) => {
+          const absoluteIndex = heroes.length + idx;
+          const shouldShowLoading =
+            nextSlot &&
+            nextSlot.type === 'pick' &&
+            nextSlot.index === absoluteIndex &&
+            ((nextSlot.team === 'Radiant' && team === radiant) ||
+              (nextSlot.team === 'Dire' && team === dire));
+
+          return (
+            <div
+              key={`empty-${idx}`}
+              className={shouldShowLoading ? 'next-slot' : ''}
+              style={{
+                width: size,
+                height: size,
+                backgroundColor: '#1f2937',
+                borderRadius: '8px',
+                margin: '4px',
+              }}
+            >
+              {shouldShowLoading && (
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  src="/loading.webm"
+                  className="object-contain rounded-md"
+                  style={{ width: '100%', height: '100%' }}
+                />
+              )}
+            </div>
+          );
+        })}
       </div>
     );
   };
 
   // Render banned heroes
-  const renderBannedHeroes = (heroes, size = '80px', totalSlots = 7, nextSlotIndex) => {
+  const renderBannedHeroes = (heroes, size = '80px', totalSlots = 7, nextSlot, team) => {
     return (
       <div className="flex flex-wrap gap-2 red-tint">
         {heroes.map((hero, idx) => (
@@ -179,30 +215,46 @@ const DraftOverlay = ({ leagueId }) => {
             <div className="absolute inset-0 flex items-center justify-center">
               <span className="font-bold text-red-600 text-7xl">X</span>
             </div>
-            <div className="absolute bottom-0 text-xs text-center text-white bg-black bg-opacity-50 left: 0 right:">
+            <div className="absolute bottom-0 left-0 right-0 text-xs text-center text-white bg-black bg-opacity-50">
               {formatHeroName(hero)}
             </div>
           </div>
         ))}
-        {Array.from({ length: totalSlots - heroes.length }).map((_, idx) => (
-          <div
-            key={`empty-${idx}`}
-            className={idx === nextSlotIndex ? 'next-slot' : ''}
-            style={{ width: size, height: size, backgroundColor: '#1f2937', borderRadius: '8px', margin: '4px' }}
-          >
-            {idx === nextSlotIndex && (
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                src="/loading.webm"
-                className="object-contain rounded-md"
-                style={{ width: '100%', height: '100%' }}
-              />
-            )}
-          </div>
-        ))}
+        {Array.from({ length: totalSlots - heroes.length }).map((_, idx) => {
+          const absoluteIndex = heroes.length + idx;
+          const shouldShowLoading =
+            nextSlot &&
+            nextSlot.type === 'ban' &&
+            nextSlot.index === absoluteIndex &&
+            ((nextSlot.team === 'Radiant' && team === radiant) ||
+             (nextSlot.team === 'Dire' && team === dire));
+
+          return (
+            <div
+              key={`empty-${idx}`}
+              className={shouldShowLoading ? 'next-slot' : ''}
+              style={{
+                width: size,
+                height: size,
+                backgroundColor: '#1f2937',
+                borderRadius: '8px',
+                margin: '4px',
+              }}
+            >
+              {shouldShowLoading && (
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  src="/loading.webm"
+                  className="object-contain rounded-md"
+                  style={{ width: '100%', height: '100%' }}
+                />
+              )}
+            </div>
+          );
+        })}
       </div>
     );
   };
@@ -232,10 +284,7 @@ const DraftOverlay = ({ leagueId }) => {
   const radiantTeamInfo = getTeamByPlayerNames(radiantPlayerNames) || { name: 'Radiant', logo: '/radiant.webp' };
   const direTeamInfo = getTeamByPlayerNames(direPlayerNames) || { name: 'Dire', logo: '/dire.webp' };
 
-  const nextRadiantPickSlot = getNextSlotIndex(radiant, 'pick');
-  const nextDirePickSlot = getNextSlotIndex(dire, 'pick');
-  const nextRadiantBanSlot = getNextSlotIndex(radiant, 'ban');
-  const nextDireBanSlot = getNextSlotIndex(dire, 'ban');
+  const activeTeamName = activeTeam === 'Radiant' ? radiantTeamInfo.name : direTeamInfo.name;
 
   return (
     <div className="relative text-white bg-transparent" style={{ width: '1920px', height: '1080px' }}>
@@ -281,7 +330,7 @@ const DraftOverlay = ({ leagueId }) => {
             }} />
           <div className="absolute" style={{ bottom: '270px', left: '100px' }}>
             <h1 className="text-xl font-bold text-green-400">{radiantTeamInfo.name} Picks</h1>
-            {renderPickedHeroes(getTeamPicks(radiant), '100px', 5, nextRadiantPickSlot)}
+            {renderPickedHeroes(getTeamPicks(radiant), '100px', 5, nextSlot, radiant)}
             {activeTeam === 'Radiant' && (
               <img
                 src="/arrow.png"
@@ -290,11 +339,6 @@ const DraftOverlay = ({ leagueId }) => {
                 style={{ ...arrowStyle, left: '835px', bottom: '20px' }}
               />
             )}
-            {getTeamPicks(radiant).map(hero => (
-              <div key={hero}>
-                <p>{hero}: {renderHeroWinRate(hero)}</p>
-              </div>
-            ))}
           </div>
 
           {/* Dire Picks */}
@@ -308,7 +352,7 @@ const DraftOverlay = ({ leagueId }) => {
                 height: '100px',
               }} />
             <h1 className="text-xl font-bold text-red-400">{direTeamInfo.name} Picks</h1>
-            {renderPickedHeroes(getTeamPicks(dire), '100px', 5, nextDirePickSlot)}
+            {renderPickedHeroes(getTeamPicks(dire), '100px', 5, nextSlot, dire)}
             {activeTeam === 'Dire' && (
               <img
                 src="/arrow.png"
@@ -317,11 +361,6 @@ const DraftOverlay = ({ leagueId }) => {
                 style={{ ...arrowStyle, right: '835px', bottom: '20px' }}
               />
             )}
-            {getTeamPicks(dire).map(hero => (
-              <div key={hero}>
-                <p>{hero}: {renderHeroWinRate(hero)}</p>
-              </div>
-            ))}
           </div>
 
           {/* Draft Timer and Active Selection */}
@@ -345,23 +384,40 @@ const DraftOverlay = ({ leagueId }) => {
                 {formatTime(draft.dire_bonus_time || 0)}s
               </span>
             </p>
-            <h3 className="mt-2 text-xl font-bold text-white">{activeTeam} is selecting: {activePickOrBan}</h3>
+            <h3 className="mt-2 text-xl font-bold text-white">{activeTeamName} is selecting: {activePickOrBan}</h3>
           </div>
 
           {/* Radiant Bans */}
           <div className="absolute" style={{ bottom: '100px', left: '100px' }}>
             <h1 className="text-lg font-bold text-green-400">{radiantTeamInfo.name} Bans</h1>
-            {renderBannedHeroes(getTeamBans(radiant), '80px', 7, nextRadiantBanSlot)}
+            {renderBannedHeroes(getTeamBans(radiant), '80px', 7, nextSlot, radiant)}
           </div>
 
           {/* Dire Bans */}
           <div className="absolute" style={{ bottom: '100px', right: '100px' }}>
             <h1 className="text-lg font-bold text-red-400">{direTeamInfo.name} Bans</h1>
-            {renderBannedHeroes(getTeamBans(dire), '80px', 7, nextDireBanSlot)}
+            {renderBannedHeroes(getTeamBans(dire), '80px', 7, nextSlot, dire)}
           </div>
         </div>
       )}
-    </div>
+      <div
+  className="absolute flex items-center gap-2"
+  style={{
+    bottom: '20px',
+    right: '20px',
+    backgroundColor: 'rgba(0, 0, 0, 0.7)',
+    padding: '10px 15px',
+    borderRadius: '8px',
+  }}
+>
+  <img
+    src="/teamlogos/imprint_esports.png"
+    alt="Imprint Logo"
+    style={{ width: '30px', height: '30px' }}
+  />
+  <span className="text-sm font-semibold text-white">Stats by Imprint Esports</span>
+</div>
+     </div>
   );
 };
 
