@@ -1,3 +1,43 @@
+/* Arrow rotates to point at Radiant */
+@keyframes arrow-rotate-radiant {
+  0% {
+    transform: rotate(180deg) scaleX(1); /* Start pointing to Dire */
+  }
+  100% {
+    transform: rotate(0deg) scaleX(1); /* End pointing to Radiant */
+  }
+}
+
+/* Arrow rotates to point at Dire */
+@keyframes arrow-rotate-dire {
+  0% {
+    transform: rotate(0deg) scaleX(-1); /* Start pointing to Radiant */
+  }
+  100% {
+    transform: rotate(180deg) scaleX(-1); /* End pointing to Dire */
+  }
+}
+
+/* Apply the animations */
+.arrow-rotate-radiant {
+  animation: arrow-rotate-radiant 0.5s ease-in-out forwards;
+}
+
+.arrow-rotate-dire {
+  animation: arrow-rotate-dire 0.5s ease-in-out forwards;
+  rotate: 180deg;
+}
+
+/* Shared arrow styles */
+.arrow {
+  position: absolute;
+  transform: translateX(-50%); /* Center horizontally */
+  top: 67%;
+  width: 50px;
+  height: 50px;
+  z-index: 30;
+}
+
 /* Glow effect for reserve time */
 .glow-effect {
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);

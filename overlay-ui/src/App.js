@@ -1,4 +1,5 @@
-import DraftOverlay from './DraftOverlay';
+import DraftOverlay from './components/Draft/DraftOverlay';
+
 
 export default function App() {
   return (

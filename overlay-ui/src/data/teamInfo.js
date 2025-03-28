@@ -1,0 +1,159 @@
+const teams = {
+    team2: {
+      name: 'Radiant',
+      logo: '/assests/logos/radiant.webp',
+      players: [
+        { id: 1, name: 'Player1' },
+        { id: 2, name: 'Player2' },
+        { id: 3, name: 'Player3' },
+        { id: 4, name: 'Player4' },
+        { id: 5, name: 'Player5' },
+      ],
+    },
+    team3: {
+      name: 'Dire',
+      logo: '/assets/logos/dire.webp',
+      players: [
+        { id: 1, name: 'Player1' },
+        { id: 2, name: 'Player2' },
+        { id: 3, name: 'Player3' },
+        { id: 4, name: 'Player4' },
+        { id: 5, name: 'Player5' },
+      ],
+    },
+    imprint: {
+      name: 'Imprint Esports',
+      logo: '/assets/logos/imprint_esports.png',
+      players: [
+        { id: 1, name: 'eN1gma' },
+        { id: 2, name: 'Asgrav' },
+        { id: 3, name: 'HumbleFoxy' },
+        { id: 4, name: 'Choncobhar' },
+        { id: 5, name: 'PK' },
+      ],
+    },
+    miketeam: {
+      name: 'Mike Team',
+      logo: '/assets/logos/mike_team.png',
+      players: [
+        { id: 1, name: 'Pro_Mike' },
+        { id: 2, name: 'Jesse James' },
+        { id: 3, name: 'Sindicate' },
+        { id: 4, name: 'Sabotage' },
+        { id: 5, name: 'Hosikage' },
+      ],
+    },
+    croakercamp: {
+      name: 'Croaker Camp',
+      logo: '/assets/logos/croaker_camp.png',
+      players: [
+        { id: 1, name: 'Onix' },
+        { id: 2, name: 'Poddy' },
+        { id: 3, name: 'Fost' },
+        { id: 4, name: 'Vantalion' },
+        { id: 5, name: 'Vax' },
+      ],
+    },
+    wongs: {
+      name: 'Wongs Bakery 罌粟',
+      logo: '/assets/logos/wongs_bakery.png',
+      players: [
+        { id: 1, name: 'M<>niac' },
+        { id: 2, name: 'K4mky' },
+        { id: 3, name: 'Shirx' },
+        { id: 4, name: 'Nagi' },
+        { id: 5, name: 'Coral' },
+      ],
+    },
+    cavan: {
+      name: 'Cavan',
+      logo: '/assets/logos/cavan.png',
+      players: [
+        { id: 1, name: 'Coy' },
+        { id: 2, name: 'Key' },
+        { id: 3, name: 'Seer' },
+        { id: 4, name: 'Holy Diver' },
+        { id: 5, name: 'Jojo Baggins' },
+      ],
+    },
+    joonsquad: {
+      name: 'Joon Squad',
+      logo: '/assets/logos/joon_squad.png',
+      players: [
+        { id: 1, name: 'Stinky' },
+        { id: 2, name: 'Solar Crest' },
+        { id: 3, name: 'Mr Diddlez' },
+        { id: 4, name: 'Faith Cian' },
+        { id: 5, name: 'Mousey' },
+      ],
+    },
+    taylorteam: {
+      name: 'Taylor Team',
+      logo: '/assets/logos/tailor_team.png',
+      players: [
+        { id: 1, name: 'Taylor' },
+        { id: 2, name: 'Bambi' },
+        { id: 3, name: 'Smokey' },
+        { id: 4, name: 'Piano Man' },
+        { id: 5, name: 'Welan' },
+      ],
+    },
+    forgletcamp: {
+      name: 'Foglet Camp',
+      logo: '/assets/logos/forglet_camp.png',
+      players: [
+        { id: 1, name: 'NoLeaves' },
+        { id: 2, name: 'Sprite' },
+        { id: 3, name: 'Smeli' },
+        { id: 4, name: 'Plaoosert' },
+        { id: 5, name: 'Flipper' },
+      ],
+    },
+    niallteam: {
+      name: 'Titanic Esports',
+      logo: '/assets/logos/titanic_esports.png',
+      players: [
+        { id: 1, name: 'Niall' },
+        { id: 2, name: 'OVOXO' },
+        { id: 3, name: 'Young Handyman' },
+        { id: 4, name: 'Pliskin' },
+        { id: 5, name: 'Catalyst' },
+      ],
+    },
+    pisspotissues: {
+      name: 'Piss Pot Issues',
+      logo: '/assets/logos/piss_pot_issues.png',
+      players: [
+        { id: 1, name: 'Joe Trollan' },
+        { id: 2, name: 'Manlyman' },
+        { id: 3, name: 'BrionFX' },
+        { id: 4, name: '' },
+        { id: 5, name: '' },
+      ],
+    },
+    teamliquid: {
+      name: 'Team Liquid',
+      logo: '/assets/logos/team_liquid.png',
+      players: [
+        { id: 1, name: 'Insania' },
+        { id: 2, name: 'EI SaberLightO' },
+        { id: 3, name: 'Nisha' },
+        { id: 4, name: 'Boxi' },
+        { id: 5, name: 'm1CKa' },
+      ],
+    },
+    tundraesports: {
+      name: 'Tundra Esports',
+      logo: '/assets/logos/tundra_esports.png',
+      players: [
+        { id: 1, name: 'Skiter' },
+        { id: 2, name: 'Nine' },
+        { id: 3, name: '33' },
+        { id: 4, name: 'Fata' },
+        { id: 5, name: 'Sneyking' },
+      ],
+    },
+  };
+  
+  export default teams;
+  
