@@ -53,16 +53,18 @@ const PickedHeroes = ({ heroes, totalSlots = 5, nextSlot, heroStats, team, size 
               {formatHeroName(hero)}
             </div>
             <div className="absolute left-0 right-0 p-1 mt-1 text-xs text-center text-yellow-400 bg-gray-900 top-full bg-opacity-80 rounded-b-md">
-              <div className="flex flex-col items-center space-y-1">
-                <div className="flex items-center justify-between w-full">
-                  <span className="font-bold text-white">Win Rate:</span>
+              <div className="flex flex-col items-center" style={
+                    { fontSize: '10.6px' }
+                  }>
+                <div className="flex items-center justify-between w-full m-0">
+                  <span className="font-bold text-white" >Win Rate:</span>
                   <span>{winRate}</span>
                 </div>
-                <div className="flex items-center justify-between w-full">
+                <div className="flex items-center justify-between w-full m-0">
                   <span className="font-bold text-white">Matches:</span>
                   <span>{matchCount}</span>
                 </div>
-                <div className="flex items-center justify-between w-full">
+                <div className="flex items-center justify-between w-full m-0">
                   <span className="font-bold text-white">Avg Rating:</span>
                   <span>{averageImprintRating}</span>
                 </div>
